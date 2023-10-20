@@ -22,6 +22,13 @@ export const projectData = [
     },
     {
         id: 4,
+        title: 'GLE Coin Counter',
+        description:
+            'Coin counting using machine learning.',
+        gitHubLink: 'https://github.com/guyettinger/gle-coin-counter',
+    },
+    {
+        id: 5,
         title: 'GO Wiki',
         description:
             'Expansion of the wiki built in the Golang Web Application Tutorial.',
