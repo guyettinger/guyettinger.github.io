@@ -9,7 +9,8 @@ import Contact from "@/components/Contact";
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 10%
+  padding: 0 10%;
+  font-family: Roboto, sans-serif;
 `
 
 export default function Home() {

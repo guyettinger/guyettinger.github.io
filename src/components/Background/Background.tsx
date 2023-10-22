@@ -9,7 +9,7 @@ const BackgroundCanvas = styled(Canvas)`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(10deg, #0f0f10, #006fd3);
+  background: linear-gradient(10deg, #0f0f10, #013062);
 `
 
 export const Background = (props: any) => {

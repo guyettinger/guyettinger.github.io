@@ -10,7 +10,7 @@ const PageBody = styled.body`
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  font-family: Roboto, serif;
+  font-family: Roboto, sans-serif;
 `
 
 const PageMain = styled.main`

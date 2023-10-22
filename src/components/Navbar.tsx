@@ -25,7 +25,8 @@ const NavSpacer = styled.div`
 
 const NavLinkIcon = styled.a`
   flex: auto;
-  max-width: 48px;
+  max-width:24px;
+  margin-right: 14px;
   color: #dadada;
   font-size: 1.5rem;
   transition: all 0.5s ease-in-out;
