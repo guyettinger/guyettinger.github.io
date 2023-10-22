@@ -27,7 +27,7 @@ const AboutTextContainer = styled.div`
   width: 50%;
 
   @media screen and (max-width: 768px) {
-      width: 100%;
+    width: 100%;
   }
 `
 
@@ -41,7 +41,7 @@ const AboutImageContainer = styled.div`
   width: 50%;
 
   @media screen and (max-width: 768px) {
-      width: 100%;
+    width: 100%;
   }
 `
 
@@ -68,18 +68,17 @@ const About = () => {
             <AboutFlexContainer>
                 <AboutTextContainer>
                     <AboutParagraph>
-                        As a developer, I have always been passionate about creating elegant and effective solutions to
+                        As an engineer, I have always been passionate about creating elegant and effective solutions to
                         complex problems. I have a strong foundation in software development, with a focus on web
-                        technologies such as HTML, CSS, JavaScript, Typescript. I enjoy working on both the front-end and
-                        back-end of applications, and I am always looking for ways to optimize performance, improve user
-                        experience, and ensure the highest level of code quality.
+                        technologies. I enjoy working on both the front-end and back-end of applications, and I am
+                        always looking for ways to optimize performance, improve user experience, and ensure the highest
+                        level of code quality.
                     </AboutParagraph>
                     <AboutParagraph>
-                        Throughout my career, I have worked on a wide range of projects, from simple static websites to
-                        complex enterprise-level applications. I am experienced in working with a variety of development
-                        tools and frameworks, including React, Angular, and Node.js. I am always eager
-                        to learn and explore new technologies, and I am constantly seeking out opportunities to improve
-                        my skills and knowledge.
+                        Throughout my career, I have worked on a wide range of projects, from simple tools to complex
+                        enterprise-level applications. I am experienced in working with a variety of development tools
+                        and frameworks. I am always eager to learn and explore new technologies, and I am constantly
+                        seeking out opportunities to improve my skills and knowledge.
                     </AboutParagraph>
                 </AboutTextContainer>
                 <AboutImageContainer>

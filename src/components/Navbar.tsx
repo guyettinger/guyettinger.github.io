@@ -11,29 +11,29 @@ const NavContainer = styled.div`
     background-color: #1D1E20;
 `
 
+const NavLogo = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+`
+
 const NavImage = styled(Image)`
     margin: -14px 0
 `
 
-const NavCallToAction = styled.a`
-  background-color: #45a5db;
-  color: #1D1E20;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-weight: 600;
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
-  display: inline-block;
-
-  &:hover {
-    background-color: #DADADB;
-  }
+const NavSpacer = styled.div`
+  flex:auto;
 `
 
-const NavLogo = styled.div`
+const NavLinkIcon = styled.a`
+  flex: auto;
+  max-width: 48px;
+  color: #9B9C9D;
   font-size: 1.5rem;
-  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+
+  :hover {
+    color: #DADADB;
+  }
 `
 
 const Navbar = () => {
@@ -45,7 +45,23 @@ const Navbar = () => {
                     Guy Ettinger
                 </Link>
             </NavLogo>
-            <NavCallToAction href="">Resume</NavCallToAction>
+            <NavSpacer></NavSpacer>
+            <NavLinkIcon
+                href="https://github.com/guyettinger"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i className="fa-brands fa-github"></i>
+            </NavLinkIcon>
+            <NavLinkIcon
+                href="https://www.linkedin.com/in/guyettinger/"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i className="fa-brands fa-linkedin"></i>
+            </NavLinkIcon>
         </NavContainer>
     )
 }
