@@ -43,8 +43,8 @@ const Contact = () => {
     return (
         <ContactContainer className="contact-container">
             <ContactHeader>Get In Touch</ContactHeader>
-            <ContactParagraph>If you want us to work together, have any questions or want me to speak at your event, my
-                inbox is always open. Whether I just want to say hi, I'll try my best to get back to you!
+            <ContactParagraph>If you want to work together, have any questions, or just grab a cup of coffee, my
+                inbox is always open. I'll try my best to get back to you!
                 Cheers!</ContactParagraph>
             <ContactLink href="mailto:guy.ettinger@gmail.com">Say Hello</ContactLink>
         </ContactContainer>
