@@ -82,7 +82,7 @@ const About = () => {
                     </AboutParagraph>
                 </AboutTextContainer>
                 <AboutImageContainer>
-                    <AboutImage src='/avatar.png' width={300} height={500} alt={"Avatar"}/>
+                    <AboutImage src='/images/coffeepowered.jpeg' width={300} height={800} alt={"Avatar"}/>
                 </AboutImageContainer>
             </AboutFlexContainer>
         </AboutContainer>

@@ -8,7 +8,6 @@ const NavContainer = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
-    background-color: #1D1E20;
 `
 
 const NavLogo = styled.div`
@@ -27,12 +26,12 @@ const NavSpacer = styled.div`
 const NavLinkIcon = styled.a`
   flex: auto;
   max-width: 48px;
-  color: #9B9C9D;
+  color: #dadada;
   font-size: 1.5rem;
   transition: all 0.5s ease-in-out;
 
   :hover {
-    color: #DADADB;
+    color: #FFFFFF;
   }
 `
 
@@ -40,7 +39,7 @@ const Navbar = () => {
     return (
         <NavContainer>
             <NavLogo>
-                <NavImage src='/avatar.png' className="profile-img" width={48} height={48} alt="Guy's Avatar" />
+                <NavImage src='/images/avatar.png' className="profile-img" width={48} height={48} alt="Guy's Avatar" />
                 <Link href="/">
                     Guy Ettinger
                 </Link>

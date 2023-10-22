@@ -35,12 +35,15 @@ const HeroParagraph = styled.p`
 const Hero = () => {
     return (
         <HeroContainer>
-            <Image src='/avatar.png' className="profile-img" width={300} height={300} alt="Guy's Avatar"/>
+            <Image src='/images/heroshot.png' className="profile-img" width={200} height={200} alt="Guy's Avatar"/>
             <HeroText>
                 <HeroHeader1>Hi, I'm Guy 👋</HeroHeader1>
                 <HeroParagraph>
-                    I'm a software engineer based in Atlanta, GA. I specialize in designing and implementing exceptional
-                    user experiences.
+                    I'm a software engineer based in Atlanta, GA.
+                </HeroParagraph>
+                <HeroParagraph>
+                    I specialize in designing and implementing exceptional user experiences (and drinking massive
+                    amounts of coffee).
                 </HeroParagraph>
             </HeroText>
         </HeroContainer>

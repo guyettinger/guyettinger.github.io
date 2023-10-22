@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { ReactNode } from "react";
 import styled from "styled-components";
 import AppStyleProvider from "@/styles/AppStyleProvider";
+import { Background } from "@/components/Background/Background";
 
 const PageBody = styled.body`
   display: flex;
@@ -19,6 +20,7 @@ const PageMain = styled.main`
 const PageLayout = ({children}: { children: ReactNode }) => {
     return (
         <PageBody>
+            <Background/>
             <AppStyleProvider>
                 <Navbar/>
                 <PageMain>
