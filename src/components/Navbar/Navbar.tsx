@@ -58,17 +58,17 @@ export const Navbar = () => {
                 <Menu name="Professional" primary={true} variant={"medium"} buttonContent={<span>Professional Projects</span>}>
                     {professionalProjectData && professionalProjectData.map((professionalProject) => {
                         return (
-                            <MenuItem name={professionalProject.title}>
+                            <MenuItem key={professionalProject.id} name={professionalProject.title}>
                                 <Link href={professionalProject.link}>{professionalProject.title}</Link>
                             </MenuItem>
                         )})
                     }
                 </Menu>
                 <Menu name="Projects" primary={true} variant={"medium"} buttonContent={<span>Github Projects</span>}>
-                    {githubProjectData && githubProjectData.map((project) => {
+                    {githubProjectData && githubProjectData.map((githubProject) => {
                         return (
-                        <MenuItem name={project.title}>
-                            <Link href={project.gitHubLink} target={"_blank"}>{project.title}</Link>
+                        <MenuItem key={githubProject.id} name={githubProject.title}>
+                            <Link href={githubProject.gitHubLink} target={"_blank"}>{githubProject.title}</Link>
                         </MenuItem>
                         )})
                     }
