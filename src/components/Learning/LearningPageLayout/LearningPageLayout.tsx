@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ReactNode } from "react";
 
-export const ProfessionalPageContainer = styled.main`
+export const LearningPageContainer = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -29,12 +29,12 @@ export const ProfessionalPageContainer = styled.main`
 
 `
 
-export const ProfessionalPageLayout = ({children}: { children: ReactNode }) => {
+export const LearningPageLayout = ({children}: { children: ReactNode }) => {
     return (
-        <ProfessionalPageContainer>
+        <LearningPageContainer>
             <main>
                 {children}
             </main>
-        </ProfessionalPageContainer>
+        </LearningPageContainer>
     )
 }

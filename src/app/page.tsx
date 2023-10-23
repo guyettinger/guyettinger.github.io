@@ -4,8 +4,9 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Contact } from "@/components/Contact";
-import { GithubProjects } from "@/components/GithubProjects";
-import { ProfessionalProjects } from "@/components/ProfessionalProjects";
+import { ProjectList } from "../components/Projects/ProjectList";
+import { ResumeList } from "../components/Resume/ResumeList";
+import { LearningList } from "@/components";
 
 const HomeContainer = styled.div`
   display: flex;
@@ -20,8 +21,9 @@ export default function Home() {
             <Hero/>
             <About/>
             <Skills/>
-            <ProfessionalProjects/>
-            <GithubProjects/>
+            <ResumeList/>
+            <ProjectList/>
+            <LearningList/>
             <Contact/>
         </HomeContainer>
     )

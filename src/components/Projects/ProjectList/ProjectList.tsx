@@ -1,6 +1,6 @@
 "use client"
 import styled from "styled-components";
-import { githubProjectData } from "@/data/githubProjectData";
+import { projectData } from "@/data/projectData";
 
 const ProjectsContainer = styled.div`
   padding: 2rem 0;
@@ -19,14 +19,15 @@ const ProjectsGrid = styled.div`
 
   @media screen and (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
-}
+  }
 `
 
 const ProjectsCard = styled.div`
-  border: 1px solid  rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.9);
   padding: 20px;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.4);
+
   &:hover {
     background: rgba(0, 0, 0, 0.9);
   }
@@ -53,7 +54,8 @@ const ProjectLink = styled.a`
   margin-right: 5px;
   cursor: pointer;
   transition: all .5s ease;
-  &:hover{
+
+  &:hover {
     color: #0186de;
   }
 `
@@ -72,19 +74,26 @@ const ProjectDescription = styled.p`
   color: #b3b3b3;
 `
 
-export const GithubProjects = () => {
+export const ProjectList = () => {
     return (
         <ProjectsContainer>
-            <ProjectsHeader>Github Projects</ProjectsHeader>
+            <ProjectsHeader>Projects</ProjectsHeader>
             <ProjectsGrid>
-                {githubProjectData && githubProjectData.map((project) => (
+                {projectData && projectData.map((project) => (
                     <ProjectsCard key={project.id}>
                         <ProjectHeader>
                             <ProjectFolderIcon className="fa-regular fa-folder-open"></ProjectFolderIcon>
                             <ProjectIcons>
-                                <ProjectLink href={project.gitHubLink} target="_blank">
-                                    <ProjectIcon className="fa-brands fa-github"></ProjectIcon>
-                                </ProjectLink>
+                                {!!project.demoLink &&
+                                    <ProjectLink href={project.demoLink} target="_blank">
+                                        <ProjectIcon className="fa-solid fa-link"></ProjectIcon>
+                                    </ProjectLink>
+                                }
+                                {!!project.gitHubLink &&
+                                    <ProjectLink href={project.gitHubLink} target="_blank">
+                                        <ProjectIcon className="fa-brands fa-github"></ProjectIcon>
+                                    </ProjectLink>
+                                }
                             </ProjectIcons>
                         </ProjectHeader>
                         <ProjectTitle>{project.title}</ProjectTitle>
