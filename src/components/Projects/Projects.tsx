@@ -68,7 +68,7 @@ const ProjectDescription = styled.p`
   color: #b3b3b3;
 `
 
-const Projects = () => {
+export const Projects = () => {
     return (
         <ProjectsContainer>
             <ProjectsHeader>Projects</ProjectsHeader>
@@ -92,5 +92,3 @@ const Projects = () => {
         </ProjectsContainer>
     )
 }
-
-export default Projects;

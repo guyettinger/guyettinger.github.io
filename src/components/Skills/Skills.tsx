@@ -82,7 +82,7 @@ const SkillIcon = styled.i`
 const SkillParagraph = styled.p`
 `
 
-const Skills = () => {
+export const Skills = () => {
     return (
         <SkillsContainer>
             <SkillsHeader>Skills</SkillsHeader>
@@ -131,5 +131,3 @@ const Skills = () => {
         </SkillsContainer>
     )
 }
-
-export default Skills;

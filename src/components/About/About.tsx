@@ -25,7 +25,8 @@ const AboutFlexContainer = styled.div`
 
 const AboutTextContainer = styled.div`
   width: 50%;
-
+  align-self: self-start;
+  
   @media screen and (max-width: 768px) {
     width: 100%;
   }
@@ -48,7 +49,7 @@ const AboutImageContainer = styled.div`
 const AboutImage = styled(Image)`
   overflow: hidden;
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
   border: 2px solid #DADADB;
   filter: grayscale(100%);
@@ -61,7 +62,7 @@ const AboutImage = styled(Image)`
   }
 `
 
-const About = () => {
+export const About = () => {
     return (
         <AboutContainer>
             <AboutHeader>About Me</AboutHeader>
@@ -88,5 +89,3 @@ const About = () => {
         </AboutContainer>
     )
 }
-
-export default About

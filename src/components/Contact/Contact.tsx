@@ -39,16 +39,15 @@ const ContactLink = styled.a`
   display: inline-block;
 `
 
-const Contact = () => {
+export const Contact = () => {
     return (
         <ContactContainer className="contact-container">
             <ContactHeader>Get In Touch</ContactHeader>
-            <ContactParagraph>If you want to work together, have any questions, or just grab a cup of coffee, my
-                inbox is always open. I'll try my best to get back to you!
-                Cheers!</ContactParagraph>
+            <ContactParagraph>If you want to work together or have any questions, my inbox is always open. I'll try my
+                best to get back to you!
+                Cheers!
+            </ContactParagraph>
             <ContactLink href="mailto:guy.ettinger@gmail.com">Say Hello</ContactLink>
         </ContactContainer>
     )
 }
-
-export default Contact;

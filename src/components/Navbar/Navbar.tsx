@@ -4,10 +4,10 @@ import styled from "styled-components";
 import Image from "next/image";
 
 const NavContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
 `
 
 const NavLogo = styled.div`
@@ -36,7 +36,7 @@ const NavLinkIcon = styled.a`
   }
 `
 
-const Navbar = () => {
+export const Navbar = () => {
     return (
         <NavContainer>
             <NavLogo>
@@ -65,5 +65,3 @@ const Navbar = () => {
         </NavContainer>
     )
 }
-
-export default Navbar;

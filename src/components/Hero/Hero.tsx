@@ -32,7 +32,7 @@ const HeroParagraph = styled.p`
   margin-bottom: 1rem;
 `
 
-const Hero = () => {
+export const Hero = () => {
     return (
         <HeroContainer>
             <Image src='/images/heroshot.png' className="profile-img" width={200} height={200} alt="Guy's Avatar"/>
@@ -49,5 +49,3 @@ const Hero = () => {
         </HeroContainer>
     )
 }
-
-export default Hero

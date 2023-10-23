@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
-import { Stars } from "@/components/Stars/Stars";
 import styled from "styled-components";
+import { Stars } from "@/components/Stars";
 
 const BackgroundCanvas = styled(Canvas)`
   position: fixed !important;
@@ -9,7 +9,7 @@ const BackgroundCanvas = styled(Canvas)`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(10deg, #0f0f10, #013062);
+  background: linear-gradient(0deg, #000000, #013062);
 `
 
 export const Background = (props: any) => {
