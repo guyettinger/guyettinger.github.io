@@ -10,7 +10,7 @@ export const Patent = () => {
             <h2>Patents</h2>
             <section>
                 <h3>US11216663B1</h3>
-                <img src={'/images/portfolio/pointivo/patent.png'} alt={"Illuminate Report"} width={640}/>
+                <img src={'/images/portfolio/pointivo/Patent.png'} alt={"Patent"} width={640}/>
                 <br/>
                 <PatentDescription>
                     Systems and methods for generating of 3D information on a user display from processing of sensor
