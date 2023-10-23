@@ -1,6 +1,6 @@
 "use client"
 import styled from "styled-components";
-import { projectData } from "@/data/projectData";
+import { githubProjectData } from "@/data/githubProjectData";
 
 const ProjectsContainer = styled.div`
   padding: 2rem 0;
@@ -72,12 +72,12 @@ const ProjectDescription = styled.p`
   color: #b3b3b3;
 `
 
-export const Projects = () => {
+export const GithubProjects = () => {
     return (
         <ProjectsContainer>
-            <ProjectsHeader>Projects</ProjectsHeader>
+            <ProjectsHeader>Github Projects</ProjectsHeader>
             <ProjectsGrid>
-                {projectData && projectData.map((project) => (
+                {githubProjectData && githubProjectData.map((project) => (
                     <ProjectsCard key={project.id}>
                         <ProjectHeader>
                             <ProjectFolderIcon className="fa-regular fa-folder-open"></ProjectFolderIcon>

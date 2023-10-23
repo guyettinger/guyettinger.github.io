@@ -3,8 +3,9 @@ import styled from "styled-components";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
-import { Projects } from "@/components/Projects";
 import { Contact } from "@/components/Contact";
+import { GithubProjects } from "@/components/GithubProjects";
+import { ProfessionalProjects } from "@/components/ProfessionalProjects";
 
 const HomeContainer = styled.div`
   display: flex;
@@ -19,7 +20,8 @@ export default function Home() {
             <Hero/>
             <About/>
             <Skills/>
-            <Projects/>
+            <ProfessionalProjects/>
+            <GithubProjects/>
             <Contact/>
         </HomeContainer>
     )

@@ -2,6 +2,9 @@
 import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
+import { Button, Menu, MenuItem } from "gle-components";
+import { githubProjectData } from "@/data/githubProjectData";
+import { professionalProjectData } from "@/data/professionalProjectData";
 
 const NavContainer = styled.div`
   display: flex;
@@ -9,6 +12,10 @@ const NavContainer = styled.div`
   align-items: center;
   padding: 1rem 0;
   background: rgba(0, 0, 0, 0.4);
+  
+  button {
+    margin-left: 1.5rem;
+  }
 `
 
 const NavLogo = styled.div`
@@ -45,6 +52,27 @@ export const Navbar = () => {
                 <Link href="/">
                     Guy Ettinger
                 </Link>
+                <Button primary={true} variant={"medium"}>
+                    <Link href="/"><i className="fa-solid fa-house"></i></Link>
+                </Button>
+                <Menu name="Professional" primary={true} variant={"medium"} buttonContent={<span>Professional Projects</span>}>
+                    {professionalProjectData && professionalProjectData.map((professionalProject) => {
+                        return (
+                            <MenuItem name={professionalProject.title}>
+                                <Link href={professionalProject.link}>{professionalProject.title}</Link>
+                            </MenuItem>
+                        )})
+                    }
+                </Menu>
+                <Menu name="Projects" primary={true} variant={"medium"} buttonContent={<span>Github Projects</span>}>
+                    {githubProjectData && githubProjectData.map((project) => {
+                        return (
+                        <MenuItem name={project.title}>
+                            <Link href={project.gitHubLink} target={"_blank"}>{project.title}</Link>
+                        </MenuItem>
+                        )})
+                    }
+                </Menu>
             </NavLogo>
             <NavSpacer></NavSpacer>
             <NavLinkIcon

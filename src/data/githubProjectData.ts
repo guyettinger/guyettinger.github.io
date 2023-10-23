@@ -1,4 +1,4 @@
-export const projectData = [
+export const githubProjectData = [
     {
         id: 1,
         title: 'GLE Components',
