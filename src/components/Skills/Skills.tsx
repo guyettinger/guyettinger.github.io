@@ -22,8 +22,8 @@ const SkillsGrid = styled.div`
 `
 
 const SkillCard = styled.div`
-  background-color: #DADADB;
-  color: #1D1E20;
+  background-color: rgba(0, 0, 0, 0.4);;
+  color: #efefef;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,43 +35,43 @@ const SkillCard = styled.div`
   cursor: context-menu;
 
   &.react:hover {
-    background-color: #61DAFB;
+    background-color: #61DAFB90;
   }
 
   &.angular:hover {
-    background-color: #E34F26;
+    background-color: #E34F2690;
   }
 
   &.typescript:hover {
-    background-color: #264DE4;
+    background-color: #264DE490;
   }
 
   &.js:hover {
-    background-color: #F7DF1E;
+    background-color: #F7DF1E90;
   }
 
   &.csharp:hover {
-    background-color: #af1ef7;
+    background-color: #af1ef790;
   }
 
   &.golang:hover {
-    background-color: #1eabf7;
+    background-color: #1eabf790;
   }
 
   &.python:hover {
-    background-color: #3776AB;
+    background-color: #3776AB90;
   }
 
   &.node:hover {
-    background-color: #339933;
+    background-color: #33993390;
   }
 
   &.html:hover {
-    background-color: #E34F26;
+    background-color: #E34F2690;
   }
 
   &.css:hover {
-    background-color: #264DE4;
+    background-color: #264DE490;
   }
 `
 

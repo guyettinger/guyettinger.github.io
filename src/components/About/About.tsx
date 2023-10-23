@@ -33,7 +33,7 @@ const AboutTextContainer = styled.div`
 `
 
 const AboutParagraph = styled.p`
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 1rem;
 `
@@ -51,12 +51,14 @@ const AboutImage = styled(Image)`
   width: 100%;
   height: 400px;
   object-fit: cover;
-  border: 2px solid #DADADB;
+  border: 2px solid rgba(0, 0, 0, 0.4);
   filter: grayscale(100%);
   transition: all 0.5s ease-in-out;
   cursor: cell;
+  opacity: 50%;
 
   &:hover {
+    opacity: 100%;
     filter: grayscale(0%);
     transform: scale(1.02);
   }

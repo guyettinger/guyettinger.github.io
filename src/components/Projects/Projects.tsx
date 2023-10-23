@@ -23,9 +23,13 @@ const ProjectsGrid = styled.div`
 `
 
 const ProjectsCard = styled.div`
-  border: 1px solid #e6e6e6;
+  border: 1px solid  rgba(0, 0, 0, 0.9);
   padding: 20px;
   border-radius: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
 `
 
 const ProjectHeader = styled.div`
@@ -37,7 +41,7 @@ const ProjectHeader = styled.div`
 
 const ProjectFolderIcon = styled.i`
   font-size: 35px;
-  color: #FFCC17;
+  color: #0186de;
 `
 
 const ProjectIcons = styled.div`
@@ -50,7 +54,7 @@ const ProjectLink = styled.a`
   cursor: pointer;
   transition: all .5s ease;
   &:hover{
-    color: #FFCC17;
+    color: #0186de;
   }
 `
 

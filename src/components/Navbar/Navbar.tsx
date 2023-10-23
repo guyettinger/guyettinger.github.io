@@ -8,6 +8,7 @@ const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.4);
 `
 
 const NavLogo = styled.div`

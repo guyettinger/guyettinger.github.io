@@ -28,8 +28,8 @@ const ContactParagraph = styled.p`
 `
 
 const ContactLink = styled.a`
-  background-color: #45a5da;
-  color: #1D1E20;
+  background-color: #0186de;
+  color: #efefef;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 1rem;
