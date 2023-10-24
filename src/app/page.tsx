@@ -4,8 +4,8 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Contact } from "@/components/Contact";
-import { ProjectList } from "../components/Projects/ProjectList";
-import { ResumeList } from "../components/Resume/ResumeList";
+import { ProjectList } from "@/components/Projects/ProjectList";
+import { ResumeList } from "@/components/Resume/ResumeList";
 import { LearningList } from "@/components";
 
 const HomeContainer = styled.div`
