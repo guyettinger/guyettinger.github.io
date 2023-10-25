@@ -16,6 +16,14 @@ export const projectData = [
         demoLink: 'https://guyettinger.github.io/gle-scene-components'
     },
     {
+        id: 'gle-roboflow-components',
+        title: 'GLE Roboflow Components',
+        description:
+            'A component library for Roboflow applications.',
+        gitHubLink: 'https://github.com/guyettinger/gle-roboflow-components',
+        demoLink: 'https://guyettinger.github.io/gle-roboflow-components'
+    },
+    {
         id: 'guyettinger.github.io',
         title: 'GLE Portfolio',
         description:
