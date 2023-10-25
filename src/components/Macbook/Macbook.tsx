@@ -80,7 +80,7 @@ export const Macbook = ({children}: MacbookProps) => {
                 <pointLight position={[10, 10, 10]} intensity={1.5}/>
                 <Suspense fallback={null}>
                     <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
-                        <MacbookModel children={children}/>
+                        <MacbookModel>{children}</MacbookModel>
                     </group>
                     <Environment preset="city"/>
                 </Suspense>
