@@ -24,6 +24,14 @@ export const projectData = [
         demoLink: 'https://guyettinger.github.io/gle-roboflow-components'
     },
     {
+        id: 'gle-r3f-components',
+        title: 'GLE R3F Components',
+        description:
+            'A react-three-fiber component library.',
+        gitHubLink: 'https://github.com/guyettinger/gle-r3f-components',
+        demoLink: 'https://guyettinger.github.io/gle-r3f-components'
+    },
+    {
         id: 'guyettinger.github.io',
         title: 'GLE Portfolio',
         description:
