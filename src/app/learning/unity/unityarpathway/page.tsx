@@ -1,13 +1,11 @@
 "use client"
-import { UnityEssentialsPathway } from "@/components/Learning/LearningSections/Unity/UnityEssentialsPathway/UnityEssentialsPathway";
 import { UnityARPathway } from "@/components/Learning/LearningSections/Unity/UnityARPathway/UnityARPathway";
 import { LearningPageLayout } from "@/components/Learning/LearningPageLayout";
 
 const Page = () => {
     return (
         <LearningPageLayout>
-            <h1>Unity</h1>
-            <UnityEssentialsPathway/>
+            <h1>Unity AR Pathway</h1>
             <UnityARPathway/>
         </LearningPageLayout>
     )
