@@ -48,6 +48,14 @@ export const projectData = [
         demoLink: 'https://guyettinger.github.io/gle-coin-counter'
     },
     {
+        id: 'gle-asl',
+        title: 'GLE ASL Finger Spell',
+        description:
+            'Practice ASL Finger Spelling using machine learning.',
+        gitHubLink: 'https://github.com/guyettinger/gle-asl',
+        demoLink: 'https://guyettinger.github.io/gle-asl'
+    },
+    {
         id: 'gowiki',
         title: 'GO Wiki',
         description:
