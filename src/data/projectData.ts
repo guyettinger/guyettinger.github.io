@@ -51,9 +51,17 @@ export const projectData = [
         id: 'gle-gs3d',
         title: 'GLE Gaussian Splat 3D',
         description:
-            'A library for displaying gaussian splat clouds using three.js and typescript',
+            'Gaussian Splat 3D loader for ThreeJS, converted and adapted to Typescript.',
         gitHubLink: 'https://github.com/guyettinger/gle-gs3d',
         demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-sceneview--gaussian-splat-clouds'
+    },
+    {
+        id: 'gle-potree',
+        title: 'GLE Potree',
+        description:
+            'Potree loader for ThreeJS, converted and adapted to Typescript.',
+        gitHubLink: 'https://github.com/guyettinger/gle-potree',
+        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-sceneview--point-clouds'
     },
     {
         id: 'guyettinger.github.io',
