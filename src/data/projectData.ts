@@ -1,13 +1,5 @@
 export const projectData = [
     {
-        id: 'gle-coin-counter',
-        title: 'GLE Coin Counter',
-        description:
-            'Coin counting using machine learning.',
-        gitHubLink: 'https://github.com/guyettinger/gle-coin-counter',
-        demoLink: 'https://guyettinger.github.io/gle-coin-counter'
-    },
-    {
         id: 'gle-asl',
         title: 'GLE ASL Finger Spell',
         description:
@@ -16,20 +8,20 @@ export const projectData = [
         demoLink: 'https://guyettinger.github.io/gle-asl'
     },
     {
+        id: 'gle-coin-counter',
+        title: 'GLE Coin Counter',
+        description:
+            'Coin counting using machine learning.',
+        gitHubLink: 'https://github.com/guyettinger/gle-coin-counter',
+        demoLink: 'https://guyettinger.github.io/gle-coin-counter'
+    },
+    {
         id: 'gle-components',
         title: 'GLE Components',
         description:
             'A basic React component library.',
         gitHubLink: 'https://github.com/guyettinger/gle-components',
         demoLink: 'https://guyettinger.github.io/gle-components'
-    },
-    {
-        id: 'gle-scene-components',
-        title: 'GLE Scene Components',
-        description:
-            'A component library for building 3D scenes with React Three Fiber and Cesium.',
-        gitHubLink: 'https://github.com/guyettinger/gle-scene-components',
-        demoLink: 'https://guyettinger.github.io/gle-scene-components'
     },
     {
         id: 'gle-roboflow-components',
@@ -46,6 +38,14 @@ export const projectData = [
             'A react-three-fiber component library.',
         gitHubLink: 'https://github.com/guyettinger/gle-r3f-components',
         demoLink: 'https://guyettinger.github.io/gle-r3f-components'
+    },
+    {
+        id: 'gle-scene-components',
+        title: 'GLE Scene Components',
+        description:
+            'A component library for building 3D scenes with React Three Fiber, Cesium, Point Clouds, and Gaussian Splats.',
+        gitHubLink: 'https://github.com/guyettinger/gle-scene-components',
+        demoLink: 'https://guyettinger.github.io/gle-scene-components'
     },
     {
         id: 'gle-gs3d',
