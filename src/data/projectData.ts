@@ -1,5 +1,21 @@
 export const projectData = [
     {
+        id: 'gle-coin-counter',
+        title: 'GLE Coin Counter',
+        description:
+            'Coin counting using machine learning.',
+        gitHubLink: 'https://github.com/guyettinger/gle-coin-counter',
+        demoLink: 'https://guyettinger.github.io/gle-coin-counter'
+    },
+    {
+        id: 'gle-asl',
+        title: 'GLE ASL Finger Spell',
+        description:
+            'Practice ASL Finger Spelling using machine learning.',
+        gitHubLink: 'https://github.com/guyettinger/gle-asl',
+        demoLink: 'https://guyettinger.github.io/gle-asl'
+    },
+    {
         id: 'gle-components',
         title: 'GLE Components',
         description:
@@ -32,28 +48,20 @@ export const projectData = [
         demoLink: 'https://guyettinger.github.io/gle-r3f-components'
     },
     {
+        id: 'gle-gs3d',
+        title: 'GLE Gaussian Splat 3D',
+        description:
+            'A library for displaying gaussian splat clouds using three.js and typescript',
+        gitHubLink: 'https://github.com/guyettinger/gle-gs3d',
+        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-sceneview--gaussian-splat-clouds'
+    },
+    {
         id: 'guyettinger.github.io',
         title: 'GLE Portfolio',
         description:
             'A next.js base portfolio (this site).',
         gitHubLink: 'https://github.com/guyettinger/guyettinger.github.io',
         demoLink: 'https://guyettinger.github.io'
-    },
-    {
-        id: 'gle-coin-counter',
-        title: 'GLE Coin Counter',
-        description:
-            'Coin counting using machine learning.',
-        gitHubLink: 'https://github.com/guyettinger/gle-coin-counter',
-        demoLink: 'https://guyettinger.github.io/gle-coin-counter'
-    },
-    {
-        id: 'gle-asl',
-        title: 'GLE ASL Finger Spell',
-        description:
-            'Practice ASL Finger Spelling using machine learning.',
-        gitHubLink: 'https://github.com/guyettinger/gle-asl',
-        demoLink: 'https://guyettinger.github.io/gle-asl'
     },
     {
         id: 'gowiki',
