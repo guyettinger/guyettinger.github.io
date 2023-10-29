@@ -49,6 +49,13 @@ const NavMenuIcon = styled.i`
   margin-right: 10px;
 `
 
+const MenuLink = styled(Link)`
+  margin-top: -9px;
+  padding-top: 9px;
+  margin-bottom: -11px;
+  padding-bottom: 11px;
+`
+
 export const Navbar = () => {
     return (
         <NavContainer>
@@ -65,7 +72,7 @@ export const Navbar = () => {
                     {resumeData && resumeData.map((resumeItem) => {
                         return (
                             <MenuItem key={resumeItem.id} name={resumeItem.company}>
-                                <Link href={resumeItem.link}>{resumeItem.company}</Link>
+                                <MenuLink href={resumeItem.link}>{resumeItem.company}</MenuLink>
                             </MenuItem>
                         )
                     })
@@ -79,12 +86,12 @@ export const Navbar = () => {
                                 className="fa-regular fa-folder-open"/>{project.title}</span>}>
                                 {project.gitHubLink &&
                                     <MenuItem key={`${project.id}-github`} name={`${project.title} Github`}>
-                                        <Link href={project.gitHubLink} target={"_blank"}><NavMenuIcon className="fa-brands fa-github"/>{project.title} Github</Link>
+                                        <MenuLink href={project.gitHubLink} target={"_blank"}><NavMenuIcon className="fa-brands fa-github"/>{project.title} Github</MenuLink>
                                     </MenuItem>
                                 }
                                 {project.demoLink &&
                                     <MenuItem key={`${project.id}-demo`} name={`${project.title} Demo`}>
-                                        <Link href={project.demoLink} target={"_blank"}><NavMenuIcon className="fa-solid fa-link"/>{project.title} Demo</Link>
+                                        <MenuLink href={project.demoLink} target={"_blank"}><NavMenuIcon className="fa-solid fa-link"/>{project.title} Demo</MenuLink>
                                     </MenuItem>
                                 }
                             </Menu>
@@ -97,7 +104,7 @@ export const Navbar = () => {
                     {learningData && learningData.map((learning) => {
                         return (
                             <MenuItem key={learning.id} name={learning.title}>
-                                <Link href={learning.link}>{learning.title}</Link>
+                                <MenuLink href={learning.link}>{learning.title}</MenuLink>
                             </MenuItem>
                         )
                     })
