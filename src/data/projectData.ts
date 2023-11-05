@@ -48,11 +48,11 @@ export const projectData = [
         demoLink: 'https://guyettinger.github.io/gle-scene-components'
     },
     {
-        id: 'gle-gs3d',
+        id: 'gle-gaussian-splat-3d',
         title: 'GLE Gaussian Splat 3D',
         description:
-            'Gaussian Splat 3D loader for ThreeJS, converted and adapted to Typescript.',
-        gitHubLink: 'https://github.com/guyettinger/gle-gs3d',
+            'Typed fork of Mark Kellogg\'s Gaussian Splat 3D loader for ThreeJS.',
+        gitHubLink: 'https://github.com/guyettinger/gle-gaussian-splat-3d',
         demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-sceneview--gaussian-splat-clouds'
     },
     {
