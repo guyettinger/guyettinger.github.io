@@ -1,0 +1,1 @@
+export { useWebGLAvailable } from './useWebGLAvailable'
