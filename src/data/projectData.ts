@@ -56,12 +56,27 @@ export const projectData = [
         demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-sceneview--gaussian-splat-clouds'
     },
     {
+        id: 'gle-threedtiles',
+        title: 'GLE ThreeDTiles',
+        description:
+            'Typed fork of ebeaufay/threedtiles.',
+        gitHubLink: 'https://github.com/guyettinger/gle-threedtiles',
+        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-sceneview--three-d-tiles'
+    },
+    {
         id: 'gle-potree',
         title: 'GLE Potree',
         description:
             'Potree loader for ThreeJS, converted and adapted to Typescript.',
         gitHubLink: 'https://github.com/guyettinger/gle-potree',
         demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-sceneview--point-clouds'
+    },
+    {
+        id: 'gle-pascal-voc',
+        title: 'GLE Pascal VOC',
+        description:
+            'A library for working with Pascal Visual Object Classes (VOC) Annotations.',
+        gitHubLink: 'https://github.com/guyettinger/gle-pascal-voc',
     },
     {
         id: 'guyettinger.github.io',
