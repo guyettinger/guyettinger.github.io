@@ -24,14 +24,6 @@ export const projectData = [
         demoLink: 'https://guyettinger.github.io/gle-components'
     },
     {
-        id: 'gle-roboflow-components',
-        title: 'GLE Roboflow Components',
-        description:
-            'A component library for Roboflow applications.',
-        gitHubLink: 'https://github.com/guyettinger/gle-roboflow-components',
-        demoLink: 'https://guyettinger.github.io/gle-roboflow-components'
-    },
-    {
         id: 'gle-r3f-components',
         title: 'GLE R3F Components',
         description:
@@ -77,6 +69,29 @@ export const projectData = [
         description:
             'A library for working with Pascal Visual Object Classes (VOC) Annotations.',
         gitHubLink: 'https://github.com/guyettinger/gle-pascal-voc',
+    },
+    {
+        id: 'gle-roboflow-rest-client',
+        title: 'GLE Roboflow Rest API Client',
+        description:
+            'A Roboflow Rest API Client.',
+        gitHubLink: 'https://github.com/guyettinger/gle-roboflow-rest-client'
+    },
+    {
+        id: 'gle-roboflow-components',
+        title: 'GLE Roboflow Components',
+        description:
+            'A component library for Roboflow applications.',
+        gitHubLink: 'https://github.com/guyettinger/gle-roboflow-components',
+        demoLink: 'https://guyettinger.github.io/gle-roboflow-components'
+    },
+    {
+        id: 'gle-roboflow-reinforcer',
+        title: 'GLE Roboflow Reinforcer',
+        description:
+            'An app for reinforcing Roboflow annotations.',
+        gitHubLink: 'https://github.com/guyettinger/gle-roboflow-reinforcer',
+        demoLink: 'https://guyettinger.github.io/gle-roboflow-reinforcer'
     },
     {
         id: 'guyettinger.github.io',
