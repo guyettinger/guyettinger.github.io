@@ -45,7 +45,7 @@ export const projectData = [
         description:
             'Typed fork of Mark Kellogg\'s Gaussian Splat 3D loader for ThreeJS.',
         gitHubLink: 'https://github.com/guyettinger/gle-gaussian-splat-3d',
-        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-sceneview--gaussian-splat-clouds'
+        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-scene--gaussian-splat-clouds'
     },
     {
         id: 'gle-threedtiles',
@@ -53,7 +53,7 @@ export const projectData = [
         description:
             'Typed fork of ebeaufay/threedtiles.',
         gitHubLink: 'https://github.com/guyettinger/gle-threedtiles',
-        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-sceneview--three-d-tiles'
+        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-scene--three-d-tiles'
     },
     {
         id: 'gle-potree',
@@ -61,7 +61,7 @@ export const projectData = [
         description:
             'Potree loader for ThreeJS, converted and adapted to Typescript.',
         gitHubLink: 'https://github.com/guyettinger/gle-potree',
-        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-sceneview--point-clouds'
+        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-scene--point-clouds'
     },
     {
         id: 'gle-pascal-voc',
