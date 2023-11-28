@@ -37,7 +37,7 @@ export const projectData = [
         description:
             'A component library for building 3D scenes with React Three Fiber, Cesium, Point Clouds, and Gaussian Splats.',
         gitHubLink: 'https://github.com/guyettinger/gle-scene-components',
-        demoLink: 'https://guyettinger.github.io/gle-scene-components'
+        demoLink: 'https://gle-scene-components.vercel.app'
     },
     {
         id: 'gle-gaussian-splat-3d',
@@ -45,7 +45,7 @@ export const projectData = [
         description:
             'Typed fork of Mark Kellogg\'s Gaussian Splat 3D loader for ThreeJS.',
         gitHubLink: 'https://github.com/guyettinger/gle-gaussian-splat-3d',
-        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-scene--gaussian-splat-clouds'
+        demoLink: 'https://gle-scene-components.vercel.app/?path=/story/gle-scene-components-scene--gaussian-splat-clouds'
     },
     {
         id: 'gle-threedtiles',
@@ -53,7 +53,7 @@ export const projectData = [
         description:
             'Typed fork of ebeaufay/threedtiles.',
         gitHubLink: 'https://github.com/guyettinger/gle-threedtiles',
-        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-scene--three-d-tiles'
+        demoLink: 'https://gle-scene-components.vercel.app/?path=/story/gle-scene-components-scene--three-d-tiles'
     },
     {
         id: 'gle-potree',
@@ -61,7 +61,7 @@ export const projectData = [
         description:
             'Potree loader for ThreeJS, converted and adapted to Typescript.',
         gitHubLink: 'https://github.com/guyettinger/gle-potree',
-        demoLink: 'https://guyettinger.github.io/gle-scene-components/?path=/story/gle-scene-components-scene--point-clouds'
+        demoLink: 'https://gle-scene-components.vercel.app/?path=/story/gle-scene-components-scene--point-clouds'
     },
     {
         id: 'gle-pascal-voc',
@@ -99,7 +99,7 @@ export const projectData = [
         description:
             'A next.js base portfolio.',
         gitHubLink: 'https://github.com/guyettinger/guyettinger.github.io',
-        demoLink: 'https://guyettinger.github.io'
+        demoLink: 'https://guyettinger.vercel.app/'
     },
     {
         id: 'gowiki',
