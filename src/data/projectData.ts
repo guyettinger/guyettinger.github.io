@@ -97,7 +97,7 @@ export const projectData = [
         id: 'guyettinger.github.io',
         title: 'GLE Portfolio',
         description:
-            'A next.js base portfolio (this site).',
+            'A next.js base portfolio.',
         gitHubLink: 'https://github.com/guyettinger/guyettinger.github.io',
         demoLink: 'https://guyettinger.github.io'
     },
