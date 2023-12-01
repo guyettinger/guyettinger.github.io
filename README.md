@@ -1,8 +1,13 @@
+<a href="/">
+    <img alt="logo" src="public/images/logo-flipped.png" align="right" width="120" height="120"/>
+</a>
+
 # GLE Portfolio
 Professional portfolio Next.js application
 
-# Example
-[guyettinger.github.io](https://guyettinger.github.io/)
+# Demo
+- [guyettinger.github.io](https://guyettinger.github.io/)
+- [guyettinger.vercel.app](https://guyettinger.vercel.app/)
 
 ## Development
 Install
