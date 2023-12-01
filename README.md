@@ -5,7 +5,7 @@
 # GLE Portfolio
 Professional portfolio Next.js application
 
-# Demo
+## Demo
 - [guyettinger.github.io](https://guyettinger.github.io/)
 - [guyettinger.vercel.app](https://guyettinger.vercel.app/)
 
