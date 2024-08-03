@@ -75,7 +75,7 @@ const ResumeItemTitle = styled.p`
 export const ResumeList = () => {
     return (
         <ResumeItemsContainer>
-            <ResumeItemsHeader>Resume</ResumeItemsHeader>
+            <ResumeItemsHeader>Portfolio</ResumeItemsHeader>
             <ResumeItemsGrid>
                 {resumeData && resumeData.map((resumeItem) => (
                     <ResumeItemsCard key={resumeItem.id}>
