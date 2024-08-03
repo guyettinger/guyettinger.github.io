@@ -68,7 +68,20 @@ export const Navbar = () => {
                     <Link href="/"><NavMenuIcon className="fa-solid fa-house"/>Home</Link>
                 </Button>
                 <Menu name="Resume" primary={true} variant={"medium"}
-                      buttonContent={<span><NavMenuIcon className="fa-solid fa-file-lines"/>Resume</span>}>
+                      buttonContent={<span><NavMenuIcon className="fa-solid fa-file-pdf"/>Resume</span>}>
+                    <MenuItem key="resume" name="resume">
+                        <MenuLink href="/pdfs/Resume-Guy-Ettinger-08-02-2024.pdf">
+                            Resume 2024
+                        </MenuLink>
+                    </MenuItem>
+                    <MenuItem key="leadership" name="leadership">
+                        <MenuLink href="/pdfs/Leadership-Guy-Ettinger-08-02-2024.pdf">
+                            Leadership Summary 2024
+                        </MenuLink>
+                    </MenuItem>
+                </Menu>
+                <Menu name="Portfolio" primary={true} variant={"medium"}
+                      buttonContent={<span><NavMenuIcon className="fa-solid fa-image"/>Portfolio</span>}>
                     {resumeData && resumeData.map((resumeItem) => {
                         return (
                             <MenuItem key={resumeItem.id} name={resumeItem.company}>
@@ -79,7 +92,7 @@ export const Navbar = () => {
                     }
                 </Menu>
                 <Menu name="Projects" primary={true} variant={"medium"}
-                      buttonContent={<span><NavMenuIcon className="fa-regular fa-folder-open"/>Projects</span>}>
+                      buttonContent={<span><NavMenuIcon className="fa-brands fa-github"/>Github Projects</span>}>
                     {projectData && projectData.map((project) => {
                         return (
                             <Menu key={project.id} name={project.title} buttonContent={<span><NavMenuIcon
