@@ -7,20 +7,20 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 const PageBody = styled.body`
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
 `
 
 const PageMain = styled.main`
-  flex: 1;
+    flex: 1;
 `
 
 export const PageLayout = ({children}: { children: ReactNode }) => {
     return (
         <PageBody>
-            <CanvasBackground>
-                <Stars/>
+            <CanvasBackground background={"#2a2a2a"}>
+                <Stars pointColor={"#131313"}/>
             </CanvasBackground>
             <AppStyleProvider>
                 <Navbar/>

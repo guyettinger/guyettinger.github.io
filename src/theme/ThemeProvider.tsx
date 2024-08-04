@@ -5,6 +5,10 @@ import { DefaultTheme } from "./DefaultTheme";
 
 export const ThemeProvider = ({theme, children}: PortfolioThemeProviderProps) => {
     const portfolioTheme = Object.assign({}, DefaultTheme, theme)
+
+    GLEComponentDefaultTheme.gle.color.buttonPrimaryForeground = "white"
+    GLEComponentDefaultTheme.gle.color.buttonPrimaryBackground = "rgba(0,0,0,0)"
+
     return (
         <StyledComponentsThemeProvider theme={portfolioTheme}>
             <GLEComponentThemeProvider theme={GLEComponentDefaultTheme}>

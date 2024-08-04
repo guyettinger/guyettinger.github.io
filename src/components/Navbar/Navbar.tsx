@@ -2,7 +2,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 import Image from "next/image";
-import { Button, Menu, MenuItem } from "gle-components";
+import { Menu, MenuItem } from "gle-components";
 import { projectData } from "@/data/projectData";
 import { resumeData } from "@/data/resumeData";
 import { learningData } from "@/data/learningData";
@@ -15,13 +15,15 @@ const NavContainer = styled.div`
     background: rgba(0, 0, 0, 0.4);
 
     button {
-        margin-left: 1.5rem;
+        margin-left: 0.5rem;
     }
 `
 
 const NavLogo = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 `
 
 const NavImage = styled(Image)`
@@ -49,6 +51,10 @@ const NavMenuIcon = styled.i`
     margin-right: 10px;
 `
 
+const NameLink = styled(Link)`
+    margin-right: 1rem;
+`
+
 const MenuLink = styled(Link)`
     margin-top: -9px;
     padding-top: 9px;
@@ -62,12 +68,9 @@ export const Navbar = () => {
             <NavLogo>
                 <NavImage src='/images/avatar.png' className="profile-img" width={48} height={48} alt="Guy's Avatar"/>
             </NavLogo>
-            <Link href="/">
+            <NameLink href="/">
                 Guy Ettinger
-            </Link>
-            <Button primary={true} variant={"medium"}>
-                <Link href="/"><NavMenuIcon className="fa-solid fa-house"/>Home</Link>
-            </Button>
+            </NameLink>
             <Menu name="Resume" primary={true} variant={"medium"}
                   buttonContent={<span><NavMenuIcon className="fa-solid fa-file-pdf"/>Resume</span>}>
                 <MenuItem key="resume" name="resume">
