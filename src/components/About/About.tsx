@@ -3,65 +3,66 @@ import Image from "next/image";
 import styled from "styled-components";
 
 const AboutContainer = styled.div`
-  padding: 2rem 0;
+    padding: 0;
 `
 
 const AboutHeader = styled.h2`
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 `
 
 const AboutFlexContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 2rem;
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 const AboutTextContainer = styled.div`
-  width: 50%;
-  align-self: self-start;
-  
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
+    width: 50%;
+    align-self: self-start;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 `
 
 const AboutParagraph = styled.p`
-  font-size: 1.1rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
 `
 
 const AboutImageContainer = styled.div`
-  width: 50%;
+    width: 50%;
 
-  @media screen and (max-width: 768px) {
-    width: 100%;
-  }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 `
 
 const AboutImage = styled(Image)`
-  overflow: hidden;
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border: 2px solid rgba(0, 0, 0, 0.4);
-  filter: grayscale(100%);
-  transition: all 0.5s ease-in-out;
-  cursor: cell;
-  opacity: 50%;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    filter: grayscale(100%);
+    transition: all 0.5s ease-in-out;
+    cursor: cell;
+    opacity: 50%;
+    margin-top: -50px;
 
-  &:hover {
-    opacity: 100%;
-    filter: grayscale(0%);
-    transform: scale(1.02);
-  }
+    &:hover {
+        opacity: 100%;
+        filter: grayscale(0%);
+        transform: scale(1.02);
+    }
 `
 
 export const About = () => {
@@ -70,6 +71,11 @@ export const About = () => {
             <AboutHeader>About Me</AboutHeader>
             <AboutFlexContainer>
                 <AboutTextContainer>
+                    <AboutParagraph>
+                        I'm a software engineer based in Atlanta, GA.
+                        I specialize in designing and implementing exceptional user experiences (and drinking massive
+                        amounts of coffee).
+                    </AboutParagraph>
                     <AboutParagraph>
                         As an engineer, I have always been passionate about creating elegant and effective solutions to
                         complex problems. I have a strong foundation in software development, with a focus on web
