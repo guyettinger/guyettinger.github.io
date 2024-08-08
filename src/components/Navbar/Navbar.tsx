@@ -49,6 +49,7 @@ const NavLinkIcon = styled.a`
 
 const NavMenuIcon = styled.i`
     margin-right: 10px;
+    font-size: 1rem;
 `
 
 const NameLink = styled(Link)`
