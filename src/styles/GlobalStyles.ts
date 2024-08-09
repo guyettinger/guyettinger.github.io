@@ -33,6 +33,10 @@ const styles = css`
   body {
     font-family: var(--font);
   }
+  
+  button {
+    font-family: var(--font);
+  }
 
   a {
     color: inherit;
