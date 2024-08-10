@@ -1,86 +1,96 @@
 "use client"
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
 
 const SkillsContainer = styled.div`
-  padding: 2rem 0;
+    padding: 2rem 0;
 `
 
 const SkillsHeader = styled.h2`
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 `
 
 const SkillsGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
 
-  @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
-  }
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 `
 
-const SkillCard = styled.div`
-  background-color: rgba(0, 0, 0, 0.4);;
-  color: #efefef;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 1rem;
-  padding: 1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.5s ease-in-out;
-  cursor: context-menu;
+const SkillCardStyle = styled(motion.div)`
+    background-color: rgba(0, 0, 0, 0.4);;
+    color: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out;
+    cursor: context-menu;
 
-  &.react:hover {
-    background-color: #61DAFB90;
-  }
+    &.react:hover {
+        background-color: #61DAFB90;
+    }
 
-  &.angular:hover {
-    background-color: #E34F2690;
-  }
+    &.angular:hover {
+        background-color: #E34F2690;
+    }
 
-  &.typescript:hover {
-    background-color: #264DE490;
-  }
+    &.typescript:hover {
+        background-color: #264DE490;
+    }
 
-  &.js:hover {
-    background-color: #F7DF1E90;
-  }
+    &.js:hover {
+        background-color: #F7DF1E90;
+    }
 
-  &.csharp:hover {
-    background-color: #af1ef790;
-  }
+    &.csharp:hover {
+        background-color: #af1ef790;
+    }
 
-  &.golang:hover {
-    background-color: #1eabf790;
-  }
+    &.golang:hover {
+        background-color: #1eabf790;
+    }
 
-  &.python:hover {
-    background-color: #3776AB90;
-  }
+    &.python:hover {
+        background-color: #3776AB90;
+    }
 
-  &.node:hover {
-    background-color: #33993390;
-  }
+    &.node:hover {
+        background-color: #33993390;
+    }
 
-  &.html:hover {
-    background-color: #E34F2690;
-  }
+    &.html:hover {
+        background-color: #E34F2690;
+    }
 
-  &.css:hover {
-    background-color: #264DE490;
-  }
+    &.css:hover {
+        background-color: #264DE490;
+    }
 `
 
 const SkillIcon = styled.i`
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 `
 
 const SkillParagraph = styled.p`
 `
+
+const SkillCard = ({children, className}: { children: ReactNode, className: string }) => {
+    return <SkillCardStyle
+        className={className}
+        whileHover={{scale: 1.05}}>
+        {children}
+    </SkillCardStyle>
+}
 
 export const Skills = () => {
     return (

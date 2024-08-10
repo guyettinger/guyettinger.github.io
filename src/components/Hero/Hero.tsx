@@ -26,8 +26,6 @@ const HeroText = styled.div`
 `
 
 const HeroHeader1 = styled.h1`
-    font-size: 2.2rem;
-    font-weight: 600;
     margin-bottom: 1rem;
 `
 
@@ -41,16 +39,19 @@ export const Hero = () => {
             <HeroImageContainer
                 initial={{opacity: 0, scale: 0.5}}
                 animate={{opacity: 1, scale: 1}}
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.9}}
                 transition={{
                     duration: 0.8,
-                    delay: 0.5,
+                    delay: 0,
                     ease: [0, 0.71, 0.2, 1.01]
                 }}>
                 <Image src='/images/heroshot.png' className="profile-img" width={200} height={200} alt="Guy's Avatar"/>
             </HeroImageContainer>
             <HeroText>
                 <HeroHeader1>Hi, I'm Guy</HeroHeader1>
-                <HeroWave animate={{rotate: [0, 0, 90, 90, 0]}}>
+                <HeroWave animate={{rotate: [0, 0, 0, 90, 90, 0]}}
+                          whileHover={{rotate: [0, 0, 0, 90, 90, 0]}}>
                     <HeroHeader1>👋</HeroHeader1>
                 </HeroWave>
             </HeroText>
