@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-three/drei": "^9.109.3",
     "@react-three/fiber": "^8.16.8",
+    "framer-motion": "^11.3.24",
     "gle-components": "^1.0.3",
     "gle-r3f-components": "^1.0.5",
     "next": "latest",
