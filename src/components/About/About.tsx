@@ -72,16 +72,14 @@ export const About = () => {
             <AboutFlexContainer>
                 <AboutTextContainer>
                     <AboutParagraph>
-                        I'm a software engineer based in Atlanta, GA.
                         I specialize in designing and implementing exceptional user experiences (and drinking massive
                         amounts of coffee).
                     </AboutParagraph>
                     <AboutParagraph>
                         As an engineer, I have always been passionate about creating elegant and effective solutions to
-                        complex problems. I have a strong foundation in software development, with a focus on web
+                        complex problems. I have a strong foundation in software development, with a focus on emerging
                         technologies. I enjoy working on both the front-end and back-end of applications, and I am
-                        always looking for ways to optimize performance, improve user experience, and ensure the highest
-                        level of code quality.
+                        always looking for ways to improve everyone experience (user and engineer alike).
                     </AboutParagraph>
                     <AboutParagraph>
                         Throughout my career, I have worked on a wide range of projects, from simple tools to complex
