@@ -8,10 +8,11 @@ const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 3rem 0;
 `
 
 const HeroImageContainer = styled(motion.div)`
+    margin-bottom: 1em;
 `
 
 const HeroText = styled.div`

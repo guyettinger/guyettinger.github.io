@@ -73,7 +73,7 @@ export const Navbar = () => {
                 Guy Ettinger
             </NameLink>
             <Menu name="Resume" primary={true} variant={"medium"}
-                  buttonContent={<span><NavMenuIcon className="fa-solid fa-file-pdf"/>Resume</span>}>
+                  buttonContent={<span><NavMenuIcon className="fa-solid fa-scroll"/>Resume</span>}>
                 <MenuItem key="resume" name="resume">
                     <MenuLink href="/pdfs/Resume-Guy-Ettinger-08-02-2024.pdf">
                         Resume 2024
@@ -86,7 +86,7 @@ export const Navbar = () => {
                 </MenuItem>
             </Menu>
             <Menu name="Portfolio" primary={true} variant={"medium"}
-                  buttonContent={<span><NavMenuIcon className="fa-solid fa-image"/>Portfolio</span>}>
+                  buttonContent={<span><NavMenuIcon className="fa-solid fa-photo-film"/>Portfolio</span>}>
                 {resumeData && resumeData.map((resumeItem) => {
                     return (
                         <MenuItem key={resumeItem.id} name={resumeItem.company}>
