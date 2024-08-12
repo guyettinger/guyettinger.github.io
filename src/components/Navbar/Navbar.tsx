@@ -75,7 +75,7 @@ export const Navbar = () => {
             <Menu name="Resume" primary={true} variant={"medium"}
                   buttonContent={<span><NavMenuIcon className="fa-solid fa-scroll"/>Resume</span>}>
                 <MenuItem key="resume" name="resume">
-                    <MenuLink href="/pdfs/Resume-Guy-Ettinger-08-02-2024.pdf">
+                    <MenuLink href="/pdfs/Resume-Guy-Ettinger-08-11-2024.pdf">
                         Resume 2024
                     </MenuLink>
                 </MenuItem>
