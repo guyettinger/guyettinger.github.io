@@ -9,22 +9,45 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
 const PageBody = styled.body`
+    position: relative !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+`
+
+const PageBackground = styled.div`
+    position: absolute !important;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+`
+
+const PageContent = styled.div`
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100dvh;
+    overflow: hidden;
 `
 
 const PageMain = styled.main`
     flex: 1;
+    overflow: auto;
 `
 
-const ShaderCanvasContainer = styled.div`
-    position: fixed !important;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+const PageNav = styled.div`
 `
 
 export const PageLayout = ({children}: { children: ReactNode }) => {
@@ -37,15 +60,19 @@ export const PageLayout = ({children}: { children: ReactNode }) => {
 
     return (
         <PageBody>
-            <ShaderCanvasContainer>
-                <ShaderCanvas shaderMaterial={shaderMaterial} renderCallback={renderCallback}/>
-            </ShaderCanvasContainer>
             <AppStyleProvider>
-                <Navbar/>
-                <PageMain>
-                    {children}
-                </PageMain>
-                <Footer/>
+                <PageContent>
+                    <PageNav>
+                        <Navbar/>
+                    </PageNav>
+                    <PageMain>
+                        {children}
+                    </PageMain>
+                    <Footer/>
+                </PageContent>
+                <PageBackground>
+                    <ShaderCanvas shaderMaterial={shaderMaterial} renderCallback={renderCallback}/>
+                </PageBackground>
             </AppStyleProvider>
         </PageBody>
     )
