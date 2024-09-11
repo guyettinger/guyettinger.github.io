@@ -1,0 +1,45 @@
+type Annotation {
+  id: Int!
+  latitude: Float!
+  longitude: Float!
+  symbol: String!
+  note: String
+}
+
+type AnnotationPage {
+  annotations: [Annotation!]!
+  count: Int!
+}
+
+enum Sort {
+  asc
+  desc
+}
+
+input AnnotationInput {
+  id: Int
+  latitude: Float!
+  longitude: Float!
+  symbol: String!
+  note: String
+}
+
+input AnnotationOrderByInput {
+  createdAt: Sort
+}
+
+input GetAnnotationsInput {
+  filter: String, skip: Int, take: Int, orderBy: AnnotationOrderByInput
+}
+
+type Query {
+  annotations: [Annotation]
+  getAnnotations(input: GetAnnotationsInput): AnnotationPage
+  getAnnotation(id: Int!): Annotation
+}
+
+type Mutation {
+  createAnnotation(input: AnnotationInput): Annotation
+  updateAnnotation(input: AnnotationInput): Annotation
+  deleteAnnotation(id: Int!): Annotation
+}

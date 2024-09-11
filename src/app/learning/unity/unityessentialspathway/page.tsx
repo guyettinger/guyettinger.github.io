@@ -1,13 +1,17 @@
 "use client"
-import { UnityEssentialsPathway } from "@/components/Learning/LearningSections/Unity/UnityEssentialsPathway/UnityEssentialsPathway";
-import { LearningPageLayout } from "@/components/Learning/LearningPageLayout";
+import { Stack, ScrollArea } from "@mantine/core";
+import {
+    UnityEssentialsPathway
+} from "@/blocks/Learning/LearningSections/Unity/UnityEssentialsPathway/UnityEssentialsPathway";
 
 const Page = () => {
     return (
-        <LearningPageLayout>
-            <h1>Unity Essentials Pathway</h1>
-            <UnityEssentialsPathway/>
-        </LearningPageLayout>
+        <ScrollArea.Autosize flex={1}>
+            <Stack align="center">
+                <h1>Unity Essentials Pathway</h1>
+                <UnityEssentialsPathway/>
+            </Stack>
+        </ScrollArea.Autosize>
     )
 }
 

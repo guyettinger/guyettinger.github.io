@@ -1,13 +1,15 @@
 "use client"
-import { UnityARPathway } from "@/components/Learning/LearningSections/Unity/UnityARPathway/UnityARPathway";
-import { LearningPageLayout } from "@/components/Learning/LearningPageLayout";
+import { Stack, ScrollArea } from "@mantine/core";
+import { UnityARPathway } from "@/blocks/Learning/LearningSections/Unity/UnityARPathway/UnityARPathway";
 
 const Page = () => {
     return (
-        <LearningPageLayout>
-            <h1>Unity AR Pathway</h1>
-            <UnityARPathway/>
-        </LearningPageLayout>
+        <ScrollArea.Autosize flex={1}>
+            <Stack align="center">
+                <h1>Unity AR Pathway</h1>
+                <UnityARPathway/>
+            </Stack>
+        </ScrollArea.Autosize>
     )
 }
 

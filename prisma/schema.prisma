@@ -1,0 +1,21 @@
+// database
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+// client
+generator client {
+  provider = "prisma-client-js"
+}
+
+// data model
+model Annotation {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  latitude  Float
+  longitude Float
+  symbol    String
+  note      String
+}

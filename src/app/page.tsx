@@ -1,30 +1,19 @@
 "use client"
-import styled from "styled-components";
-import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { Skills } from "@/components/Skills";
-import { Contact } from "@/components/Contact";
-import { ProjectList } from "@/components/Projects/ProjectList";
-import { ResumeList } from "@/components/Resume/ResumeList";
-import { LearningList } from "@/components";
-
-const HomeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0 10%;
-  font-family: Roboto, sans-serif;
-`
+import { ScrollArea, Stack } from "@mantine/core";
+import { Hero, About, Skills, Contact, ProjectList, ResumeList, LearningList } from "@/blocks";
 
 export default function Home() {
     return (
-        <HomeContainer>
-            <Hero/>
-            <About/>
-            <Skills/>
-            <ResumeList/>
-            <ProjectList/>
-            <LearningList/>
-            <Contact/>
-        </HomeContainer>
+        <ScrollArea.Autosize flex={1}>
+            <Stack px={`10vw`} justify="center">
+                <Hero/>
+                <About/>
+                <Skills/>
+                <ResumeList/>
+                <ProjectList/>
+                <LearningList/>
+                <Contact/>
+            </Stack>
+        </ScrollArea.Autosize>
     )
 }

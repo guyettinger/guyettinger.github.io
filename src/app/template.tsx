@@ -5,7 +5,9 @@ import { ReactNode } from "react";
 import styled from "styled-components";
 
 const TemplateContainer = styled(motion.div)`
-
+    flex: auto;
+    height: 100%;
+    display: flex;
 `
 
 export default function Template({children}: { children: ReactNode }) {

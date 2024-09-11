@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { ReactNode } from "react";
-import { PageLayout } from "@/components/PageLayout";
+import { PageLayout } from "../blocks/PageLayout";
 
 export const metadata: Metadata = {
     title: 'Guy Ettinger',

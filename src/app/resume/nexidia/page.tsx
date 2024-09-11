@@ -1,17 +1,19 @@
 "use client"
-import { DialogueSearch } from "@/components/Resume/ResumeSections/Nexidia/DialogueSearch/DialogueSearch";
-import { Illuminate } from "@/components/Resume/ResumeSections/Nexidia/Illuminate/Illuminate";
-import { Emmy } from "@/components/Resume/ResumeSections/Nexidia/Emmy/Emmy";
-import { ResumePageLayout } from "@/components/Resume/ResumePageLayout/ResumePageLayout";
+import { ScrollArea, Stack } from "@mantine/core";
+import { DialogueSearch } from "@/blocks/Resume/ResumeSections/Nexidia/DialogueSearch/DialogueSearch";
+import { Illuminate } from "@/blocks/Resume/ResumeSections/Nexidia/Illuminate/Illuminate";
+import { Emmy } from "@/blocks/Resume/ResumeSections/Nexidia/Emmy/Emmy";
 
 const Page = () => {
     return (
-        <ResumePageLayout>
-            <h1>Nexidia</h1>
-            <DialogueSearch/>
-            <Illuminate/>
-            <Emmy/>
-        </ResumePageLayout>
+        <ScrollArea.Autosize flex={1}>
+            <Stack align="center">
+                <h1>Nexidia</h1>
+                <DialogueSearch/>
+                <Illuminate/>
+                <Emmy/>
+            </Stack>
+        </ScrollArea.Autosize>
     )
 }
 

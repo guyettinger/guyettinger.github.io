@@ -1,15 +1,17 @@
 "use client"
-import { MediaCentralSearch } from "@/components/Resume/ResumeSections/Avid/MediaCentralSearch/MediaCentralSearch";
-import { Illuminate } from "@/components/Resume/ResumeSections/Avid/Illuminate/Illuminate";
-import { ResumePageLayout } from "@/components/Resume/ResumePageLayout/ResumePageLayout";
+import { Stack, ScrollArea } from "@mantine/core";
+import { MediaCentralSearch } from "@/blocks/Resume/ResumeSections/Avid/MediaCentralSearch/MediaCentralSearch";
+import { Illuminate } from "@/blocks/Resume/ResumeSections/Avid/Illuminate/Illuminate";
 
 const Page = () => {
     return (
-        <ResumePageLayout>
-            <h1>Avid</h1>
-            <MediaCentralSearch/>
-            <Illuminate/>
-        </ResumePageLayout>
+        <ScrollArea.Autosize flex={1}>
+            <Stack align="center">
+                <h1>Avid</h1>
+                <MediaCentralSearch/>
+                <Illuminate/>
+            </Stack>
+        </ScrollArea.Autosize>
     )
 }
 
