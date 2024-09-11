@@ -58,7 +58,7 @@ export const Navbar = () => {
                               priority={true}/>
                 </NavLogo>
 
-                <NameLink href="/public">
+                <NameLink href="/">
                     <Text c={"white"} fw={500} size={"lg"}>
                         Guy Ettinger
                     </Text>
