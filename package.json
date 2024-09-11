@@ -13,7 +13,8 @@
     "studio": "npx prisma studio",
     "generate": "npm run generate-server && npm run generate-client",
     "generate-client": "rimraf ./graphql/client/ && graphql-codegen --config codegen-client.ts",
-    "generate-server": "rimraf ./graphql/server/ && graphql-codegen --config codegen-server.ts"
+    "generate-server": "rimraf ./graphql/server/ && graphql-codegen --config codegen-server.ts",
+    "postinstall": "npm run generate-client"
   },
   "dependencies": {
     "@mantine/core": "^7.12.2",
