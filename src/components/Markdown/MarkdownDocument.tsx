@@ -24,7 +24,6 @@ export const MarkdownDocument = ({url, baseUrl}: MarkdownDocumentProps) => {
     });
 
     const urlTransform = (url: string, key: string, node: any) => {
-        console.log("key", key, "url", url);
         if (!url.startsWith("http")) {
             return baseUrl + decodeURI(url)
         }

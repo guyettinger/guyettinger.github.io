@@ -1,5 +1,4 @@
 'use client';
-
 import { ReactNode } from "react";
 import { StyledComponentsRegistry } from "@/styles/StyledComponentRegistry";
 import { GlobalStyles } from "@/styles/GlobalStyles";

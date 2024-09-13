@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { ReactNode } from "react";
-import { PageLayout } from "../blocks/PageLayout";
+import { AppProvider } from "@/providers/AppProvider";
+import { AppLayout } from "../blocks/AppLayout";
 
 export const metadata: Metadata = {
     title: 'Guy Ettinger',
@@ -23,9 +24,13 @@ export default function RootLayout({children}: { children: ReactNode }) {
                 referrerPolicy="no-referrer"
             />
         </head>
-        <PageLayout>
-            {children}
-        </PageLayout>
+        <body lang="en">
+        <AppProvider>
+            <AppLayout>
+                {children}
+            </AppLayout>
+        </AppProvider>
+        </body>
         </html>
     )
 }

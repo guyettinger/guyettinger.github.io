@@ -1,9 +1,12 @@
 "use client"
+import { MapProvider } from "react-map-gl";
 import { MojiMap } from "@/blocks/MojiMap";
 
 const Page = () => {
     return (
-        <MojiMap/>
+        <MapProvider>
+            <MojiMap/>
+        </MapProvider>
     )
 }
 

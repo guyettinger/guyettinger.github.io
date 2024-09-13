@@ -2,21 +2,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import styled from "styled-components";
-import { Menu, Button, Text, Group } from '@mantine/core';
+import { Menu, Button, Text, Group, Box } from '@mantine/core';
 import { projectData } from "@/data/projectData";
 import { resumeData } from "@/data/resumeData";
 import { learningData } from "@/data/learningData";
-
-const NavLogo = styled.div`
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-`
-
-const NavImage = styled(Image)`
-    margin: 0 0
-`
+import { HeaderProps } from "@/blocks/Header/Header.types";
 
 const NavSpacer = styled.div`
     flex: auto;
@@ -39,63 +29,58 @@ const NavMenuIcon = styled.i`
     margin-right: 10px;
 `
 
-const NameLink = styled(Link)`
-`
-
-const MenuLink = styled(Link)`
-`
-
-export const Navbar = () => {
+export const Header = ({...groupProps}:HeaderProps) => {
     return (
-        <Group justify="space-between" bg={"rgba(0, 0, 0, 0.4)"} h={"auto"}>
+        <Group justify="space-between" {...groupProps}>
             <Group gap={0}>
-                <NavLogo>
-                    <NavImage src='/images/avatar.png'
-                              className="profile-img"
-                              width={48}
-                              height={48}
-                              alt="Guy's Avatar"
-                              priority={true}/>
-                </NavLogo>
+                <Box mx={"0.5rem"}>
+                    <Image src='/images/avatar.png'
+                           className="profile-img"
+                           style={{margin: "0", verticalAlign: "middle"}}
+                           width={48}
+                           height={48}
+                           alt="Guy's Avatar"
+                           priority={true}/>
+                </Box>
 
-                <NameLink href="/">
-                    <Text c={"white"} fw={500} size={"lg"}>
+                <Link href="/">
+                    <Text fw={500} size={"lg"}>
                         Guy Ettinger
                     </Text>
-                </NameLink>
+                </Link>
             </Group>
 
             <Menu>
                 <Menu.Target>
-                    <Button variant="subtle">
-                        <Text c={"white"}><NavMenuIcon className="fa-solid fa-scroll"/>Resume</Text>
+                    <Button variant="filled">
+                        <Text><NavMenuIcon className="fa-solid fa-scroll"/>Resume</Text>
                     </Button>
                 </Menu.Target>
                 <Menu.Dropdown>
                     <Menu.Item>
-                        <MenuLink href="/pdfs/Resume-Guy-Ettinger-08-11-2024.pdf">
+                        <Link href="/pdfs/Resume-Guy-Ettinger-08-11-2024.pdf">
                             Resume 2024
-                        </MenuLink>
+                        </Link>
                     </Menu.Item>
                     <Menu.Item>
-                        <MenuLink href="/pdfs/Leadership-Guy-Ettinger-08-02-2024.pdf">
+                        <Link href="/pdfs/Leadership-Guy-Ettinger-08-02-2024.pdf">
                             Leadership Summary 2024
-                        </MenuLink>
+                        </Link>
                     </Menu.Item>
                 </Menu.Dropdown>
             </Menu>
 
             <Menu>
                 <Menu.Target>
-                    <Button variant="subtle">
-                        <Text c={"white"}><NavMenuIcon className="fa-solid fa-photo-film"/>Portfolio</Text>
+                    <Button variant="filled">
+                        <Text><NavMenuIcon className="fa-solid fa-photo-film"/>Portfolio</Text>
                     </Button>
                 </Menu.Target>
                 <Menu.Dropdown>
                     {resumeData && resumeData.map((resumeItem) => {
                         return (
                             <Menu.Item key={resumeItem.id} name={resumeItem.company}>
-                                <MenuLink href={resumeItem.link}>{resumeItem.company}</MenuLink>
+                                <Link href={resumeItem.link}>{resumeItem.company}</Link>
                             </Menu.Item>
                         )
                     })
@@ -105,8 +90,8 @@ export const Navbar = () => {
 
             <Menu closeOnItemClick={false} position="bottom-start">
                 <Menu.Target>
-                    <Button variant="subtle">
-                        <Text c={"white"}><NavMenuIcon className="fa-brands fa-github"/>Github Projects</Text>
+                    <Button variant="filled">
+                        <Text><NavMenuIcon className="fa-brands fa-github"/>Github Projects</Text>
                     </Button>
                 </Menu.Target>
                 <Menu.Dropdown>
@@ -121,14 +106,14 @@ export const Navbar = () => {
                                 <Menu.Dropdown>
                                     {project.gitHubLink &&
                                         <Menu.Item key={`${project.id}-github`} name={`${project.title} Github`}>
-                                            <MenuLink href={project.gitHubLink} target={"_blank"}><NavMenuIcon
-                                                className="fa-brands fa-github"/>{project.title} Github</MenuLink>
+                                            <Link href={project.gitHubLink} target={"_blank"}><NavMenuIcon
+                                                className="fa-brands fa-github"/>{project.title} Github</Link>
                                         </Menu.Item>
                                     }
                                     {project.demoLink &&
                                         <Menu.Item key={`${project.id}-demo`} name={`${project.title} Demo`}>
-                                            <MenuLink href={project.demoLink} target={"_blank"}><NavMenuIcon
-                                                className="fa-solid fa-link"/>{project.title} Demo</MenuLink>
+                                            <Link href={project.demoLink} target={"_blank"}><NavMenuIcon
+                                                className="fa-solid fa-link"/>{project.title} Demo</Link>
                                         </Menu.Item>
                                     }
 
@@ -142,15 +127,15 @@ export const Navbar = () => {
 
             <Menu>
                 <Menu.Target>
-                    <Button variant="subtle">
-                        <Text c={"white"}><NavMenuIcon className="fa-solid fa-graduation-cap"/>Learning</Text>
+                    <Button variant="filled">
+                        <Text><NavMenuIcon className="fa-solid fa-graduation-cap"/>Learning</Text>
                     </Button>
                 </Menu.Target>
                 <Menu.Dropdown>
                     {learningData && learningData.map((learning) => {
                         return (
                             <Menu.Item key={learning.id} name={learning.title}>
-                                <MenuLink href={learning.link}>{learning.title}</MenuLink>
+                                <Link href={learning.link}>{learning.title}</Link>
                             </Menu.Item>
                         )
                     })
