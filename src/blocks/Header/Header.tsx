@@ -1,11 +1,10 @@
-"use client"
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, Button, Text, Group, Box } from '@mantine/core';
+import { Menu, Button, Text, Group, Box, MenuTarget, MenuDropdown, MenuItem } from '@mantine/core';
+import { HeaderProps } from "@/blocks/Header/Header.types";
 import { projectData } from "@/data/projectData";
 import { resumeData } from "@/data/resumeData";
 import { learningData } from "@/data/learningData";
-import { HeaderProps } from "@/blocks/Header/Header.types";
 
 export const Header = ({...groupProps}: HeaderProps) => {
     return (
@@ -27,101 +26,101 @@ export const Header = ({...groupProps}: HeaderProps) => {
                 </Link>
             </Group>
             <Menu>
-                <Menu.Target>
+                <MenuTarget>
                     <Button variant="filled" leftSection={<Text className="fa-solid fa-scroll"/>}>
                         <Text>Resume</Text>
                     </Button>
-                </Menu.Target>
-                <Menu.Dropdown>
-                    <Menu.Item>
+                </MenuTarget>
+                <MenuDropdown>
+                    <MenuItem>
                         <Link href="/pdfs/Resume-Guy-Ettinger-08-11-2024.pdf">
                             Resume 2024
                         </Link>
-                    </Menu.Item>
-                    <Menu.Item>
+                    </MenuItem>
+                    <MenuItem>
                         <Link href="/pdfs/Leadership-Guy-Ettinger-08-02-2024.pdf">
                             Leadership Summary 2024
                         </Link>
-                    </Menu.Item>
-                </Menu.Dropdown>
+                    </MenuItem>
+                </MenuDropdown>
             </Menu>
             <Menu>
-                <Menu.Target>
+                <MenuTarget>
                     <Button variant="filled" leftSection={<Text className="fa-solid fa-photo-film"/>}>
                         <Text>Portfolio</Text>
                     </Button>
-                </Menu.Target>
-                <Menu.Dropdown>
+                </MenuTarget>
+                <MenuDropdown>
                     {resumeData && resumeData.map((resumeItem) => {
                         return (
-                            <Menu.Item key={resumeItem.id} name={resumeItem.company}>
+                            <MenuItem key={resumeItem.id} name={resumeItem.company}>
                                 <Link href={resumeItem.link}>{resumeItem.company}</Link>
-                            </Menu.Item>
+                            </MenuItem>
                         )
                     })
                     }
-                </Menu.Dropdown>
+                </MenuDropdown>
             </Menu>
             <Menu closeOnItemClick={false} position="bottom-start">
-                <Menu.Target>
+                <MenuTarget>
                     <Button variant="filled" leftSection={<Text className="fa-brands fa-github"/>}>
                         <Text>Github Projects</Text>
                     </Button>
-                </Menu.Target>
-                <Menu.Dropdown>
+                </MenuTarget>
+                <MenuDropdown>
                     {projectData && projectData.map((project) => {
                         return (
                             <Menu key={project.id} closeOnItemClick={false} position="right-start">
-                                <Menu.Target>
-                                    <Menu.Item>
+                                <MenuTarget>
+                                    <MenuItem>
                                         <Group>
                                             <Text className="fa-regular fa-folder-open"/><Text>{project.title}</Text>
                                         </Group>
-                                    </Menu.Item>
-                                </Menu.Target>
-                                <Menu.Dropdown>
+                                    </MenuItem>
+                                </MenuTarget>
+                                <MenuDropdown>
                                     {project.gitHubLink &&
-                                        <Menu.Item key={`${project.id}-github`} name={`${project.title} Github`}>
+                                        <MenuItem key={`${project.id}-github`} name={`${project.title} Github`}>
                                             <Link href={project.gitHubLink} target={"_blank"}>
                                                 <Group>
                                                     <Text className="fa-brands fa-github"/>
                                                     <Text>{project.title} Github</Text>
                                                 </Group>
                                             </Link>
-                                        </Menu.Item>
+                                        </MenuItem>
                                     }
                                     {project.demoLink &&
-                                        <Menu.Item key={`${project.id}-demo`} name={`${project.title} Demo`}>
+                                        <MenuItem key={`${project.id}-demo`} name={`${project.title} Demo`}>
                                             <Link href={project.demoLink} target={"_blank"}>
                                                 <Group>
                                                     <Text className="fa-solid fa-link"/>
                                                     <Text>{project.title} Demo</Text>
                                                 </Group></Link>
-                                        </Menu.Item>
+                                        </MenuItem>
                                     }
-                                </Menu.Dropdown>
+                                </MenuDropdown>
                             </Menu>
                         )
                     })
                     }
-                </Menu.Dropdown>
+                </MenuDropdown>
             </Menu>
             <Menu>
-                <Menu.Target>
+                <MenuTarget>
                     <Button variant="filled" leftSection={<Text className="fa-solid fa-graduation-cap"/>}>
                         <Text>Learning</Text>
                     </Button>
-                </Menu.Target>
-                <Menu.Dropdown>
+                </MenuTarget>
+                <MenuDropdown>
                     {learningData && learningData.map((learning) => {
                         return (
-                            <Menu.Item key={learning.id} name={learning.title}>
+                            <MenuItem key={learning.id} name={learning.title}>
                                 <Link href={learning.link}>{learning.title}</Link>
-                            </Menu.Item>
+                            </MenuItem>
                         )
                     })
                     }
-                </Menu.Dropdown>
+                </MenuDropdown>
             </Menu>
             <Group flex={1}></Group>
             <Link

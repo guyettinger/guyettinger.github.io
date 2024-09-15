@@ -1,10 +1,9 @@
-"use client"
-import { ScrollArea, Stack } from "@mantine/core";
+import { ScrollAreaAutosize, Stack } from "@mantine/core";
 import { Hero, About, Skills, Contact, ProjectList, ResumeList, LearningList } from "@/blocks";
 
 export default function Home() {
     return (
-        <ScrollArea.Autosize flex={1}>
+        <ScrollAreaAutosize flex={1}>
             <Stack px={`10vw`} justify="center">
                 <Hero/>
                 <About/>
@@ -14,6 +13,6 @@ export default function Home() {
                 <LearningList/>
                 <Contact/>
             </Stack>
-        </ScrollArea.Autosize>
+        </ScrollAreaAutosize>
     )
 }

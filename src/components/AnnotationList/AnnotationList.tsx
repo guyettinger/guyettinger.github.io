@@ -1,7 +1,7 @@
-import { ScrollArea, Stack } from '@mantine/core';
-import { AnnotationListProps } from './AnnotationList.types';
+import { ScrollAreaAutosize, Stack } from '@mantine/core';
 import { Annotation } from '../../../graphql/client/graphql';
 import { AnnotationItem } from '../AnnotationItem';
+import { AnnotationListProps } from './AnnotationList.types';
 
 export const AnnotationList = ({
   annotations,
@@ -10,12 +10,12 @@ export const AnnotationList = ({
   },
 }: AnnotationListProps) => {
   return (
-    <ScrollArea.Autosize offsetScrollbars={true} scrollbarSize={4} m={0}>
+    <ScrollAreaAutosize offsetScrollbars={true} scrollbarSize={4} m={0}>
       <Stack m={5} gap={10}>
         {annotations.map((annotation) => {
           return renderAnnotationItem(annotation);
         })}
       </Stack>
-    </ScrollArea.Autosize>
+    </ScrollAreaAutosize>
   );
 };

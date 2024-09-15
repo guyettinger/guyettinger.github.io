@@ -1,3 +1,4 @@
+"use client"
 import { ReactNode } from "react";
 import { Group, Stack, Text, Title } from "@mantine/core";
 import { motion } from "framer-motion";

@@ -1,6 +1,7 @@
+"use client"
 import { ReactNode } from "react";
 import Link from "next/link";
-import { Box, ScrollArea, Stack, Text, Title } from "@mantine/core";
+import { Box, ScrollAreaAutosize, Stack, Text, Title } from "@mantine/core";
 import { learningData } from "@/data/learningData";
 import { CardContext } from "@/components/Cards/cardContext";
 import { CardGallery, CardView } from "@/components/Cards";
@@ -54,11 +55,11 @@ const LargeLearningItemView = ({learningItem, children}: LearningItemViewProps) 
                 </>
             }
         >
-            <ScrollArea.Autosize offsetScrollbars={true} scrollbarSize={4}>
+            <ScrollAreaAutosize offsetScrollbars={true} scrollbarSize={4}>
                 <Box>
                     {children}
                 </Box>
-            </ScrollArea.Autosize>
+            </ScrollAreaAutosize>
         </CardView>
     )
 }

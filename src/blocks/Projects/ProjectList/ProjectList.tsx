@@ -1,5 +1,6 @@
+"use client"
 import Link from "next/link";
-import { Box, ScrollArea, Stack, Text, Title } from "@mantine/core";
+import { Box, ScrollAreaAutosize, Stack, Text, Title } from "@mantine/core";
 import { projectData } from "@/data/projectData";
 import { CardGallery, CardView } from "@/components/Cards";
 import { CardContext } from "@/components/Cards/cardContext";
@@ -63,11 +64,11 @@ const LargeProjectView = ({project}: ProjectViewProps) => {
             }
         >
             <Title>README</Title>
-            <ScrollArea.Autosize offsetScrollbars={true} scrollbarSize={4}>
-                <Stack bg={'black'} p={20}>
+            <ScrollAreaAutosize offsetScrollbars={true} scrollbarSize={4}>
+                <Stack bg={'black'} p={20} maw={'calc(60vh - 125px)'}>
                     <MarkdownDocument url={readmeUrl} baseUrl={baseUrl}/>
                 </Stack>
-            </ScrollArea.Autosize>
+            </ScrollAreaAutosize>
         </CardView>
     )
 }

@@ -1,3 +1,4 @@
+"use client"
 import { Stack, Image, Group, Title } from "@mantine/core";
 import { motion } from "framer-motion";
 

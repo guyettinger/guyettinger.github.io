@@ -1,3 +1,4 @@
+"use client"
 import { Stack } from "@mantine/core";
 import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import { VideoProps } from "@/components/Video/Video.types";

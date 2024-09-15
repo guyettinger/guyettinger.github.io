@@ -1,4 +1,4 @@
-import { Video } from "@/components";
+import { Video } from "@/components/Video";
 
 export const DialogueSearch = () => {
     return (
