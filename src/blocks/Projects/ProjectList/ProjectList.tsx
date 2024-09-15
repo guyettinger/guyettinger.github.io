@@ -65,7 +65,7 @@ const LargeProjectView = ({project}: ProjectViewProps) => {
         >
             <Title>README</Title>
             <ScrollAreaAutosize offsetScrollbars={true} scrollbarSize={4}>
-                <Stack bg={'black'} p={20} maw={'calc(60vh - 125px)'}>
+                <Stack bg={'black'} p={20} maw={'calc(60vw - 44px)'}>
                     <MarkdownDocument url={readmeUrl} baseUrl={baseUrl}/>
                 </Stack>
             </ScrollAreaAutosize>
