@@ -1,1 +1,0 @@
-export { ResumePageLayout } from './ResumePageLayout'

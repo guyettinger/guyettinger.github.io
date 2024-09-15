@@ -1,19 +1,11 @@
 import { useState } from "react";
+import { Stack } from "@mantine/core";
 import { AnimatePresence, motion } from "framer-motion";
-import styled from "styled-components";
-import { CardList } from "@/components/Card/CardList/CardList";
-import { CardModal } from "@/components/Card/CardModal/CardModal";
-import { CardGalleryProps } from "@/components/Card/CardGallery/CardGallery.types";
+import { CardList } from "@/components/Cards/CardList/CardList";
+import { CardModal } from "@/components/Cards/CardModal/CardModal";
+import { CardGalleryProps } from "@/components/Cards/CardGallery/CardGallery.types";
 
-const CardOverlay = styled(motion.div)`
-    background: black;
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-`
+const CardOverlay = motion(Stack)
 
 export const CardGallery = ({cardContexts}: CardGalleryProps) => {
     const [index, setIndex] = useState(-1);
@@ -26,6 +18,15 @@ export const CardGallery = ({cardContexts}: CardGalleryProps) => {
                     <CardOverlay
                         key="overlay"
                         className="overlay"
+                        style={{
+                            background: 'black',
+                            opacity: 0.2,
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            bottom: 0,
+                            right: 0
+                        }}
                         initial={{opacity: 0}}
                         animate={{opacity: 0.6}}
                         exit={{opacity: 0}}

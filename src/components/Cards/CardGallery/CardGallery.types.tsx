@@ -1,4 +1,4 @@
-import { CardContext } from "@/components/Card/cardContext";
+import { CardContext } from "@/components/Cards/cardContext";
 
 export interface CardGalleryProps {
     cardContexts: CardContext[];

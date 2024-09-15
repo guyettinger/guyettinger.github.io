@@ -1,90 +1,9 @@
-"use client"
-import styled from "styled-components";
+import Link from "next/link";
+import { Box, ScrollArea, Stack, Text, Title } from "@mantine/core";
 import { projectData } from "@/data/projectData";
-import { CardContext } from "@/components/Card/cardContext";
-import { CardGallery } from "@/components/Card";
+import { CardGallery, CardView } from "@/components/Cards";
+import { CardContext } from "@/components/Cards/cardContext";
 import { MarkdownDocument } from "@/components/Markdown";
-
-const ProjectsContainer = styled.div`
-    padding: 2rem 0;
-`
-
-const ProjectsHeader = styled.h2`
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-`
-
-const ProjectsGrid = styled.div`
-    display: flex;
-`
-
-const ProjectsCard = styled.div`
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.4);
-    min-width: 325px;
-
-    &:hover {
-        background: rgba(0, 0, 0, 0.9);
-    }
-
-    &.small {
-        max-width: 325px;
-    }
-
-    &.large {
-        width: 60vw;
-        height: 80vh;
-        background: rgba(0, 0, 0, 0.9);
-    }
-`
-
-const ProjectHeader = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 20px;
-`
-
-const ProjectFolderIcon = styled.i`
-    font-size: 35px;
-    color: #0186de;
-`
-
-const ProjectIcons = styled.div`
-    display: flex;
-    gap: 0 5px;
-`
-
-const ProjectLink = styled.a`
-    margin-right: 5px;
-    cursor: pointer;
-    transition: all .5s ease;
-
-    &:hover {
-        color: #0186de;
-    }
-`
-
-const ProjectIcon = styled.i`
-`
-
-const ProjectTitle = styled.h3`
-    font-size: 20px;
-    margin-bottom: 10px;
-`
-
-const ProjectDescription = styled.div`
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #b3b3b3;
-    overflow-y: auto;
-`
 
 interface ProjectViewProps {
     project: typeof projectData[1]
@@ -92,25 +11,25 @@ interface ProjectViewProps {
 
 const SmallProjectView = ({project}: ProjectViewProps) => {
     return (
-        <ProjectsCard key={project.id} className="small">
-            <ProjectHeader>
-                <ProjectFolderIcon className="fa-regular fa-folder-open"></ProjectFolderIcon>
-                <ProjectIcons>
+        <CardView
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            actionArea={
+                <>
                     {!!project.demoLink &&
-                        <ProjectLink href={project.demoLink} target="_blank">
-                            <ProjectIcon className="fa-solid fa-link"></ProjectIcon>
-                        </ProjectLink>
+                        <Link href={project.demoLink} target="_blank">
+                            <Text className="fa-solid fa-link" size={"20px"}/>
+                        </Link>
                     }
                     {!!project.gitHubLink &&
-                        <ProjectLink href={project.gitHubLink} target="_blank">
-                            <ProjectIcon className="fa-brands fa-github"></ProjectIcon>
-                        </ProjectLink>
+                        <Link href={project.gitHubLink} target="_blank">
+                            <Text className="fa-brands fa-github" size={"20px"}/>
+                        </Link>
                     }
-                </ProjectIcons>
-            </ProjectHeader>
-            <ProjectTitle>{project.title}</ProjectTitle>
-            <ProjectDescription>{project.description}</ProjectDescription>
-        </ProjectsCard>
+                </>
+            }
+        />
     )
 }
 
@@ -119,26 +38,37 @@ const LargeProjectView = ({project}: ProjectViewProps) => {
     const readmeUrl = `${baseUrl}/README.md`
 
     return (
-        <ProjectsCard key={project.id} className="large">
-            <ProjectHeader>
-                <ProjectFolderIcon className="fa-regular fa-folder-open"></ProjectFolderIcon>
-                <ProjectIcons>
+        <CardView
+            key={project.id}
+            title={project.title}
+            description={project.description}
+            miw={'60vw'}
+            maw={'60vw'}
+            mih={'80vh'}
+            mah={'80vh'}
+            bg={'rgba(0, 0, 0, 0.9)'}
+            actionArea={
+                <>
                     {!!project.demoLink &&
-                        <ProjectLink href={project.demoLink} target="_blank">
-                            <ProjectIcon className="fa-solid fa-link"></ProjectIcon>
-                        </ProjectLink>
+                        <Link href={project.demoLink} target="_blank">
+                            <Text className="fa-solid fa-link" size={"20px"}/>
+                        </Link>
                     }
                     {!!project.gitHubLink &&
-                        <ProjectLink href={project.gitHubLink} target="_blank">
-                            <ProjectIcon className="fa-brands fa-github"></ProjectIcon>
-                        </ProjectLink>
+                        <Link href={project.gitHubLink} target="_blank">
+                            <Text className="fa-brands fa-github" size={"20px"}/>
+                        </Link>
                     }
-                </ProjectIcons>
-            </ProjectHeader>
-            <ProjectDescription>
-                <MarkdownDocument url={readmeUrl} baseUrl={baseUrl}/>
-            </ProjectDescription>
-        </ProjectsCard>
+                </>
+            }
+        >
+            <Title>README</Title>
+            <ScrollArea.Autosize offsetScrollbars={true} scrollbarSize={4}>
+                <Stack bg={'black'} p={20}>
+                    <MarkdownDocument url={readmeUrl} baseUrl={baseUrl}/>
+                </Stack>
+            </ScrollArea.Autosize>
+        </CardView>
     )
 }
 
@@ -153,11 +83,11 @@ projectData.forEach(project => {
 
 export const ProjectList = () => {
     return (
-        <ProjectsContainer>
-            <ProjectsHeader>Projects</ProjectsHeader>
-            <ProjectsGrid>
+        <Box py={2}>
+            <Title>Projects</Title>
+            <Stack>
                 <CardGallery cardContexts={cardContexts}/>
-            </ProjectsGrid>
-        </ProjectsContainer>
+            </Stack>
+        </Box>
     )
 }

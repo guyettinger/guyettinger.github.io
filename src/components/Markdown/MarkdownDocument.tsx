@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
+import { Box } from "@mantine/core";
 import Markdown from "react-markdown";
-import { MarkdownDocumentProps } from "@/components/Markdown/MarkdownDocument.types";
 import 'github-markdown-css'
-import styled from "styled-components";
-
-const MarkdownBody = styled.div`
-    background: inherit;
-`
+import { MarkdownDocumentProps } from "@/components/Markdown/MarkdownDocument.types";
 
 export const MarkdownDocument = ({url, baseUrl}: MarkdownDocumentProps) => {
     const [mdText, setMdText] = useState('');
@@ -31,8 +27,8 @@ export const MarkdownDocument = ({url, baseUrl}: MarkdownDocumentProps) => {
     }
 
     return (
-        <MarkdownBody className='markdown-body'>
+        <Box className='markdown-body' style={{background: "inherit"}}>
             <Markdown urlTransform={urlTransform} skipHtml={true}>{mdText}</Markdown>
-        </MarkdownBody>
+        </Box>
     )
 }

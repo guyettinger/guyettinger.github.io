@@ -1,35 +1,13 @@
 "use client"
 import Link from "next/link";
 import Image from "next/image";
-import styled from "styled-components";
 import { Menu, Button, Text, Group, Box } from '@mantine/core';
 import { projectData } from "@/data/projectData";
 import { resumeData } from "@/data/resumeData";
 import { learningData } from "@/data/learningData";
 import { HeaderProps } from "@/blocks/Header/Header.types";
 
-const NavSpacer = styled.div`
-    flex: auto;
-`
-
-const NavLinkIcon = styled.a`
-    flex: auto;
-    max-width: 24px;
-    margin-right: 14px;
-    color: #dadada;
-    font-size: 1.5rem;
-    transition: all 0.5s ease-in-out;
-
-    :hover {
-        color: #FFFFFF;
-    }
-`
-
-const NavMenuIcon = styled.i`
-    margin-right: 10px;
-`
-
-export const Header = ({...groupProps}:HeaderProps) => {
+export const Header = ({...groupProps}: HeaderProps) => {
     return (
         <Group justify="space-between" {...groupProps}>
             <Group gap={0}>
@@ -42,18 +20,16 @@ export const Header = ({...groupProps}:HeaderProps) => {
                            alt="Guy's Avatar"
                            priority={true}/>
                 </Box>
-
                 <Link href="/">
                     <Text fw={500} size={"lg"}>
                         Guy Ettinger
                     </Text>
                 </Link>
             </Group>
-
             <Menu>
                 <Menu.Target>
-                    <Button variant="filled">
-                        <Text><NavMenuIcon className="fa-solid fa-scroll"/>Resume</Text>
+                    <Button variant="filled" leftSection={<Text className="fa-solid fa-scroll"/>}>
+                        <Text>Resume</Text>
                     </Button>
                 </Menu.Target>
                 <Menu.Dropdown>
@@ -69,11 +45,10 @@ export const Header = ({...groupProps}:HeaderProps) => {
                     </Menu.Item>
                 </Menu.Dropdown>
             </Menu>
-
             <Menu>
                 <Menu.Target>
-                    <Button variant="filled">
-                        <Text><NavMenuIcon className="fa-solid fa-photo-film"/>Portfolio</Text>
+                    <Button variant="filled" leftSection={<Text className="fa-solid fa-photo-film"/>}>
+                        <Text>Portfolio</Text>
                     </Button>
                 </Menu.Target>
                 <Menu.Dropdown>
@@ -87,11 +62,10 @@ export const Header = ({...groupProps}:HeaderProps) => {
                     }
                 </Menu.Dropdown>
             </Menu>
-
             <Menu closeOnItemClick={false} position="bottom-start">
                 <Menu.Target>
-                    <Button variant="filled">
-                        <Text><NavMenuIcon className="fa-brands fa-github"/>Github Projects</Text>
+                    <Button variant="filled" leftSection={<Text className="fa-brands fa-github"/>}>
+                        <Text>Github Projects</Text>
                     </Button>
                 </Menu.Target>
                 <Menu.Dropdown>
@@ -100,23 +74,31 @@ export const Header = ({...groupProps}:HeaderProps) => {
                             <Menu key={project.id} closeOnItemClick={false} position="right-start">
                                 <Menu.Target>
                                     <Menu.Item>
-                                        <Text><NavMenuIcon className="fa-regular fa-folder-open"/>{project.title}</Text>
+                                        <Group>
+                                            <Text className="fa-regular fa-folder-open"/><Text>{project.title}</Text>
+                                        </Group>
                                     </Menu.Item>
                                 </Menu.Target>
                                 <Menu.Dropdown>
                                     {project.gitHubLink &&
                                         <Menu.Item key={`${project.id}-github`} name={`${project.title} Github`}>
-                                            <Link href={project.gitHubLink} target={"_blank"}><NavMenuIcon
-                                                className="fa-brands fa-github"/>{project.title} Github</Link>
+                                            <Link href={project.gitHubLink} target={"_blank"}>
+                                                <Group>
+                                                    <Text className="fa-brands fa-github"/>
+                                                    <Text>{project.title} Github</Text>
+                                                </Group>
+                                            </Link>
                                         </Menu.Item>
                                     }
                                     {project.demoLink &&
                                         <Menu.Item key={`${project.id}-demo`} name={`${project.title} Demo`}>
-                                            <Link href={project.demoLink} target={"_blank"}><NavMenuIcon
-                                                className="fa-solid fa-link"/>{project.title} Demo</Link>
+                                            <Link href={project.demoLink} target={"_blank"}>
+                                                <Group>
+                                                    <Text className="fa-solid fa-link"/>
+                                                    <Text>{project.title} Demo</Text>
+                                                </Group></Link>
                                         </Menu.Item>
                                     }
-
                                 </Menu.Dropdown>
                             </Menu>
                         )
@@ -124,11 +106,10 @@ export const Header = ({...groupProps}:HeaderProps) => {
                     }
                 </Menu.Dropdown>
             </Menu>
-
             <Menu>
                 <Menu.Target>
-                    <Button variant="filled">
-                        <Text><NavMenuIcon className="fa-solid fa-graduation-cap"/>Learning</Text>
+                    <Button variant="filled" leftSection={<Text className="fa-solid fa-graduation-cap"/>}>
+                        <Text>Learning</Text>
                     </Button>
                 </Menu.Target>
                 <Menu.Dropdown>
@@ -142,26 +123,23 @@ export const Header = ({...groupProps}:HeaderProps) => {
                     }
                 </Menu.Dropdown>
             </Menu>
-
-            <NavSpacer></NavSpacer>
-
-            <NavLinkIcon
+            <Group flex={1}></Group>
+            <Link
                 href="https://github.com/guyettinger"
                 aria-label="GitHub"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <i className="fa-brands fa-github"></i>
-            </NavLinkIcon>
-
-            <NavLinkIcon
+                <Text className="fa-brands fa-github" size={'1.5rem'} mr={14}/>
+            </Link>
+            <Link
                 href="https://www.linkedin.com/in/guyettinger/"
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <i className="fa-brands fa-linkedin"></i>
-            </NavLinkIcon>
+                <Text className="fa-brands fa-linkedin" size={'1.5rem'} mr={14}/>
+            </Link>
         </Group>
     )
 }
