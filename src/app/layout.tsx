@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { ReactNode } from "react";
+import { ColorSchemeScript } from "@mantine/core";
 import { AppProvider } from "@/providers/AppProvider";
 import { AppLayout } from "../blocks/AppLayout";
 
@@ -23,6 +24,7 @@ export default function RootLayout({children}: { children: ReactNode }) {
                 crossOrigin="anonymous"
                 referrerPolicy="no-referrer"
             />
+            <ColorSchemeScript />
         </head>
         <body lang="en">
         <AppProvider>

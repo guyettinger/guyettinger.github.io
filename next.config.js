@@ -2,12 +2,12 @@
 const nextConfig = {
     output: "export",
     reactStrictMode: false,
-    compiler: {
-        styledComponents: true
-    },
     images: {
         unoptimized: true
-    }
+    },
+    experimental: {
+        optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
+    },
 }
 
 module.exports = nextConfig
