@@ -24,7 +24,7 @@ export const About = () => {
                     </Text>
                 </Stack>
                 <Stack miw={'30vw'} maw={'30vw'}>
-                    <Image src='/images/coffeepowered.jpeg' radius={10}/>
+                    <Image src='/images/coffeepowered.jpeg' radius={10} alt={"Powered by Coffee"} />
                 </Stack>
             </Group>
         </Stack>
