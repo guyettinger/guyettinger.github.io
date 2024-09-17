@@ -97,7 +97,7 @@ export const ResumeList = () => {
     return (
         <Box py={2}>
             <Title>Portfolio</Title>
-            <Stack>
+            <Stack py={'xl'}>
                 <CardGallery cardContexts={cardContexts}/>
             </Stack>
         </Box>

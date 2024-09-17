@@ -1,6 +1,6 @@
 "use client"
 import { ReactNode } from "react";
-import { Group, Stack, Text, Title } from "@mantine/core";
+import { Group, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { motion } from "framer-motion";
 
 const MotionGroup = motion(Group)
@@ -17,7 +17,7 @@ const SkillCard = ({children, backgroundColor = "#ffffff"}: SkillCardProps) => {
             justify={'center'}
             align={'center'}
             py={'1rem'}
-            style={{borderRadius: '10px', minWidth: '18vw'}}
+            style={{borderRadius: '10px'}}
             whileHover={{scale: 1.05, backgroundColor: backgroundColor}}>
             {children}
         </MotionGroup>
@@ -28,7 +28,9 @@ export const Skills = () => {
     return (
         <Stack py={"2rem"}>
             <Title>Skills</Title>
-            <Group justify={'space-around'}>
+            <SimpleGrid cols={{base: 1, sm: 2, lg: 3, xl: 4}}
+                        spacing={'xl'}
+                        verticalSpacing={'xl'}>
                 <SkillCard backgroundColor="#61DAFB90">
                     <Text className="fa-brands fa-react react-icon" size={"1.5rem"}/>
                     <Text>React</Text>
@@ -78,7 +80,7 @@ export const Skills = () => {
                         <Text className="fa-solid fa-ellipsis css-icon" size={"1.5rem"}/>
                     </SkillCard>
                 </a>
-            </Group>
+            </SimpleGrid>
         </Stack>
     )
 }

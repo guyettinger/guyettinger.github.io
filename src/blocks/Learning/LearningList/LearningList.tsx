@@ -87,7 +87,7 @@ export const LearningList = () => {
     return (
         <Box py={2}>
             <Title>Learning</Title>
-            <Stack>
+            <Stack py={'xl'}>
                 <CardGallery cardContexts={cardContexts}/>
             </Stack>
         </Box>

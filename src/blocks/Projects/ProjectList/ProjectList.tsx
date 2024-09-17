@@ -84,9 +84,9 @@ projectData.forEach(project => {
 
 export const ProjectList = () => {
     return (
-        <Box py={2}>
+        <Box p={2}>
             <Title>Projects</Title>
-            <Stack>
+            <Stack py={'xl'}>
                 <CardGallery cardContexts={cardContexts}/>
             </Stack>
         </Box>
