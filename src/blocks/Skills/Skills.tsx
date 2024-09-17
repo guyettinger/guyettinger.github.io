@@ -26,9 +26,10 @@ const SkillCard = ({children, backgroundColor = "#ffffff"}: SkillCardProps) => {
 
 export const Skills = () => {
     return (
-        <Stack py={"2rem"}>
+        <Stack py={2}>
             <Title>Skills</Title>
             <SimpleGrid cols={{base: 1, sm: 2, lg: 3, xl: 4}}
+                        py={'md'}
                         spacing={'xl'}
                         verticalSpacing={'xl'}>
                 <SkillCard backgroundColor="#61DAFB90">
