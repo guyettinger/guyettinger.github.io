@@ -41,7 +41,6 @@ const LargeLearningItemView = ({learningItem, children}: LearningItemViewProps) 
             title={learningItem.title}
             miw={'60vw'}
             maw={'60vw'}
-            mih={'80vh'}
             mah={'80vh'}
             iconArea={<Text className="fa-solid fa-graduation-cap" size={"20px"}/>}
             actionArea={

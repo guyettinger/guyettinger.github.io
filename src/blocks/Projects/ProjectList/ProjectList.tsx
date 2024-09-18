@@ -45,7 +45,6 @@ const LargeProjectView = ({project}: ProjectViewProps) => {
             description={project.description}
             miw={'60vw'}
             maw={'60vw'}
-            mih={'80vh'}
             mah={'80vh'}
             actionArea={
                 <>
