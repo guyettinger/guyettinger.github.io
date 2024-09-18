@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Stack, Text, Title } from "@mantine/core";
+import { Button, Stack, Text, Title } from "@mantine/core";
 
 export const Contact = () => {
     return (
@@ -9,18 +9,9 @@ export const Contact = () => {
                 best to get back to you!
                 Cheers!
             </Text>
-            <Link
-                href="mailto:guy.ettinger@gmail.com"
-                style={{
-                    backgroundColor: "#0186de",
-                    color: "#efefef",
-                    padding: "0.5rem 1rem",
-                    borderRadius: "5px",
-                    fontSize: "1rem",
-                    fontWeight: 600,
-                    transition: "all 0.5s ease-in-out",
-                    cursor: "pointer"
-                }}>Say Hello</Link>
+            <Button
+                component={Link}
+                href="mailto:guy.ettinger@gmail.com">Say Hello</Button>
         </Stack>
     )
 }

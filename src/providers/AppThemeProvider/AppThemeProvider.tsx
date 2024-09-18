@@ -173,6 +173,7 @@ export const theme = createTheme({
             "#d9480f"
         ]
     },
+    primaryColor: 'cyan',
 });
 
 export const AppThemeProvider = ({children}: AppThemeProviderProps) => {
