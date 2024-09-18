@@ -12,7 +12,7 @@ interface SkillCardProps {
 
 const SkillCard = ({children, backgroundColor = "#ffffff"}: SkillCardProps) => {
     return (
-        <Card p={0} withBorder shadow={"sm"} radius="md">
+        <Card p={0} shadow={"sm"} radius="md">
             <MotionGroup
                 justify={'center'}
                 align={'center'}

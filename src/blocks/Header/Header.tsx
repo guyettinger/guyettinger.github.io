@@ -29,7 +29,7 @@ export const Header = ({...groupProps}: HeaderProps) => {
                 </Group>
                 <Menu>
                     <MenuTarget>
-                        <Button variant="outline" leftSection={<Text className="fa-solid fa-scroll"/>}>
+                        <Button variant="filled" leftSection={<Text className="fa-solid fa-scroll"/>}>
                             <Text>Resume</Text>
                         </Button>
                     </MenuTarget>
@@ -48,7 +48,7 @@ export const Header = ({...groupProps}: HeaderProps) => {
                 </Menu>
                 <Menu>
                     <MenuTarget>
-                        <Button variant="outline" leftSection={<Text className="fa-solid fa-photo-film"/>}>
+                        <Button variant="filled" leftSection={<Text className="fa-solid fa-photo-film"/>}>
                             <Text>Portfolio</Text>
                         </Button>
                     </MenuTarget>
@@ -65,7 +65,7 @@ export const Header = ({...groupProps}: HeaderProps) => {
                 </Menu>
                 <Menu closeOnItemClick={false} position="bottom-start">
                     <MenuTarget>
-                        <Button variant="outline" leftSection={<Text className="fa-brands fa-github"/>}>
+                        <Button variant="filled" leftSection={<Text className="fa-brands fa-github"/>}>
                             <Text>Github Projects</Text>
                         </Button>
                     </MenuTarget>
@@ -110,7 +110,7 @@ export const Header = ({...groupProps}: HeaderProps) => {
                 </Menu>
                 <Menu>
                     <MenuTarget>
-                        <Button variant="outline" leftSection={<Text className="fa-solid fa-graduation-cap"/>}>
+                        <Button variant="filled" leftSection={<Text className="fa-solid fa-graduation-cap"/>}>
                             <Text>Learning</Text>
                         </Button>
                     </MenuTarget>
