@@ -18,8 +18,7 @@ export const AppLayout = ({children}: { children: ReactNode }) => {
             right: 0,
             bottom: 0,
             display: "flex",
-            flexDirection: "column",
-            color: "white"
+            flexDirection: "column"
         }}>
             <Box style={{
                 position: "absolute",
@@ -30,7 +29,7 @@ export const AppLayout = ({children}: { children: ReactNode }) => {
                 display: "flex",
                 flexDirection: "column"
             }}>
-                <Box mah={HeaderHeight} mih={HeaderHeight} bg={"rgba(0, 0, 0, 0.4)"}>
+                <Box mah={HeaderHeight} mih={HeaderHeight}>
                     <Header mah={HeaderHeight} mih={HeaderHeight}/>
                 </Box>
                 <Box mah={ContentHeight} mih={ContentHeight}>

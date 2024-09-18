@@ -47,7 +47,6 @@ const LargeResumeItemView = ({resumeItem, children}: ResumeItemViewProps) => {
             maw={'60vw'}
             mih={'80vh'}
             mah={'80vh'}
-            bg={'rgba(0, 0, 0, 0.9)'}
             iconArea={<Text className="fa-solid fa-file-lines" size={"20px"}/>}
             actionArea={
                 <>

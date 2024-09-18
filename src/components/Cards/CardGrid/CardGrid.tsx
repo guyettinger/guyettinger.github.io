@@ -1,11 +1,11 @@
 import { SimpleGrid, Stack } from "@mantine/core";
 import { motion } from "framer-motion";
 import { CardContext } from "@/components/Cards/cardContext";
-import { CardListProps } from "@/components/Cards/CardList/CardList.types";
+import { CardGridProps } from "@/components/Cards/CardGrid/CardGrid.types";
 
 const MotionStack = motion(Stack)
 
-export const CardList = ({items, setIndex}: CardListProps) => {
+export const CardGrid = ({items, setIndex}: CardGridProps) => {
     return (
         <SimpleGrid
             className="card-list-container"

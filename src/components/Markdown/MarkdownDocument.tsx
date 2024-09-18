@@ -27,7 +27,7 @@ export const MarkdownDocument = ({url, baseUrl}: MarkdownDocumentProps) => {
     }
 
     return (
-        <Box className='markdown-body' style={{background: "inherit"}}>
+        <Box className='markdown-body' p={20}>
             <Markdown urlTransform={urlTransform} skipHtml={true}>{mdText}</Markdown>
         </Box>
     )

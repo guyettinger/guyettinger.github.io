@@ -15,7 +15,8 @@ export const CardModal = ({cardContext, onClick}: CardModalProps) => {
                 left: 0,
                 bottom: 0,
                 right: 0,
-                pointerEvents: 'none'
+                pointerEvents: 'none',
+                zIndex: 4000,
             }}
             onClick={onClick}>
             <MotionStack

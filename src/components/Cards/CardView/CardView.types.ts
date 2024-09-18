@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { StackProps } from "@mantine/core";
+import { CardProps } from "@mantine/core";
 
-export interface CardViewProps extends StackProps {
+export interface CardViewProps extends CardProps {
     title?: string
     description?: string
     iconArea?: ReactNode

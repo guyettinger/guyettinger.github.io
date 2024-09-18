@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Stack } from "@mantine/core";
 import { AnimatePresence, motion } from "framer-motion";
-import { CardList } from "@/components/Cards/CardList/CardList";
+import { CardGrid } from "@/components/Cards/CardGrid/CardGrid";
 import { CardModal } from "@/components/Cards/CardModal/CardModal";
 import { CardGalleryProps } from "@/components/Cards/CardGallery/CardGallery.types";
 
@@ -12,7 +12,7 @@ export const CardGallery = ({cardContexts}: CardGalleryProps) => {
 
     return (
         <>
-            <CardList items={cardContexts} setIndex={setIndex}/>
+            <CardGrid items={cardContexts} setIndex={setIndex}/>
             <AnimatePresence>
                 {index >= 0 && (
                     <CardOverlay

@@ -47,7 +47,6 @@ const LargeProjectView = ({project}: ProjectViewProps) => {
             maw={'60vw'}
             mih={'80vh'}
             mah={'80vh'}
-            bg={'rgba(0, 0, 0, 0.9)'}
             actionArea={
                 <>
                     {!!project.demoLink &&
@@ -63,9 +62,8 @@ const LargeProjectView = ({project}: ProjectViewProps) => {
                 </>
             }
         >
-            <Title>README</Title>
-            <ScrollAreaAutosize offsetScrollbars={true} scrollbarSize={4}>
-                <Stack bg={'black'} p={20} maw={'calc(60vw - 44px)'}>
+            <ScrollAreaAutosize scrollbarSize={4}>
+                <Stack maw={'calc(60vw - 38px)'}>
                     <MarkdownDocument url={readmeUrl} baseUrl={baseUrl}/>
                 </Stack>
             </ScrollAreaAutosize>
