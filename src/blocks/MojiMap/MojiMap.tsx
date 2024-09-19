@@ -178,7 +178,7 @@ export const MojiMap = () => {
     };
 
     return (
-        <Group align={'flex-start'} style={{background: 'white', color: 'black'}}>
+        <Group align={'flex-start'}>
             <Stack justify={'flex-start'} w={300}>
                 <Stack p={'sm'}>
                     <AnnotationFilterExpression
