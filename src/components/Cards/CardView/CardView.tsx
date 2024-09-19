@@ -32,7 +32,7 @@ export const CardView = ({
             </CardSection>
             {!!description && (
                 <CardSection inheritPadding my='xs'>
-                    <Text size={'sm'}>{description}</Text>
+                    <Text size={'sm'} c={'dimmed'}>{description}</Text>
                 </CardSection>
             )}
 
