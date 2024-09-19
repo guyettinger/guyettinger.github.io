@@ -24,7 +24,7 @@ export const CardView = ({
                         </Group>
                     )}
                     {!!actionArea && (
-                        <Group maw={64}>
+                        <Group maw={64} justify={'flex-end'}>
                             {actionArea}
                         </Group>
                     )}
