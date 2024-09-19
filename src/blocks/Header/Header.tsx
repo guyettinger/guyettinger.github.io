@@ -21,8 +21,8 @@ export const Header = ({...groupProps}: HeaderProps) => {
                                alt="Guy's Avatar"
                                priority={true}/>
                     </Box>
-                    <Link href="/">
-                        <Text fw={500} size={"lg"}>
+                    <Link href="/" style={{color: "inherit"}}>
+                        <Text fw={500} size={"lg"} >
                             Guy Ettinger
                         </Text>
                     </Link>
