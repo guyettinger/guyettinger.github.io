@@ -1,27 +1,22 @@
-import { SimpleGrid, Stack } from "@mantine/core";
 import { motion } from "framer-motion";
 import { CardContext } from "@/components/Cards/cardContext";
 import { CardGridProps } from "@/components/Cards/CardGrid/CardGrid.types";
 
-const MotionStack = motion(Stack)
+const MotionDiv = motion.div
 
 export const CardGrid = ({items, setIndex}: CardGridProps) => {
     return (
-        <SimpleGrid
-            className="card-list-container"
-            cols={{base: 1, sm: 2, lg: 3, xl: 4}}
-            spacing={'xl'}
-            verticalSpacing={'xl'}>
+        <div className="card-list-container grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {items.map((cardContext: CardContext, i: number) => (
-                <MotionStack
+                <MotionDiv
                     className="card-list-item"
                     layoutId={cardContext.id}
                     key={cardContext.id}
                     onClick={() => setIndex(i)}
                 >
                     {cardContext.smallView}
-                </MotionStack>
+                </MotionDiv>
             ))}
-        </SimpleGrid>
+        </div>
     );
 }

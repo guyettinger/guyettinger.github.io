@@ -1,47 +1,48 @@
-import { Card, CardSection, Group, Text, ScrollAreaAutosize } from "@mantine/core";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { CardViewProps } from "@/components/Cards/CardView/CardView.types";
 
 export const CardView = ({
                              title,
                              description,
-                             iconArea = <Text className='fa-regular fa-folder-open' size={'20px'}/>,
+                             iconArea = <i className='fa-regular fa-folder-open text-lg' />,
                              actionArea,
                              children,
+                             className,
                              ...cardProps
                          }: CardViewProps) => {
     return (
-        <Card shadow={"sm"} radius="md" {...cardProps} style={{cursor: 'pointer'}}>
-            <CardSection inheritPadding py="xs">
-                <Group grow justify="space-between" wrap={'nowrap'} gap={8}>
-                    {!!iconArea && (
-                        <Group maw={24} justify={'center'} align={'center'}>
-                            {iconArea}
-                        </Group>
-                    )}
-                    {!!title && (
-                        <Group flex={1} grow>
-                            <Text size={'md'} fw={'500'}>{title}</Text>
-                        </Group>
-                    )}
-                    {!!actionArea && (
-                        <Group maw={64} justify={'flex-end'}>
-                            {actionArea}
-                        </Group>
-                    )}
-                </Group>
-            </CardSection>
+        <Card className={`cursor-pointer ${className ?? ''}`} {...cardProps}>
+            <CardHeader className="gap-2">
+                {!!iconArea && (
+                    <div className="flex h-6 w-6 items-center justify-center">
+                        {iconArea}
+                    </div>
+                )}
+                {!!title && (
+                    <div className="flex flex-1 items-center">
+                        <CardTitle>{title}</CardTitle>
+                    </div>
+                )}
+                {!!actionArea && (
+                    <div className="ml-auto flex items-center gap-2">
+                        {actionArea}
+                    </div>
+                )}
+            </CardHeader>
+
             {!!description && (
-                <CardSection inheritPadding my='xs'>
-                    <Text size={'sm'} c={'dimmed'}>{description}</Text>
-                </CardSection>
+                <div className="px-4 pb-2">
+                    <CardDescription>{description}</CardDescription>
+                </div>
             )}
 
             {!!children && (
-                <ScrollAreaAutosize scrollbars={'y'} scrollbarSize={4} offsetScrollbars={true}>
-                    <CardSection inheritPadding my='sm'>
+                <ScrollArea className="max-h-96">
+                    <CardContent className="py-4">
                         {children}
-                    </CardSection>
-                </ScrollAreaAutosize>
+                    </CardContent>
+                </ScrollArea>
             )}
         </Card>
     )

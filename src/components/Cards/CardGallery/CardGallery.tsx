@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { Stack } from "@mantine/core";
 import { AnimatePresence, motion } from "framer-motion";
 import { CardGrid } from "@/components/Cards/CardGrid/CardGrid";
 import { CardModal } from "@/components/Cards/CardModal/CardModal";
 import { CardGalleryProps } from "@/components/Cards/CardGallery/CardGallery.types";
 
-const CardOverlay = motion(Stack)
+const CardOverlay = motion.div
 
 export const CardGallery = ({cardContexts}: CardGalleryProps) => {
     const [index, setIndex] = useState(-1);

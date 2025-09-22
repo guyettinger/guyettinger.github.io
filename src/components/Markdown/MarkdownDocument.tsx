@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Box } from "@mantine/core";
 import Markdown from "react-markdown";
 import 'github-markdown-css'
 import { MarkdownDocumentProps } from "@/components/Markdown/MarkdownDocument.types";
@@ -27,8 +26,8 @@ export const MarkdownDocument = ({url, baseUrl}: MarkdownDocumentProps) => {
     }
 
     return (
-        <Box className='markdown-body' p={20}>
+        <div className='markdown-body p-20'>
             <Markdown urlTransform={urlTransform} skipHtml={true}>{mdText}</Markdown>
-        </Box>
+        </div>
     )
 }

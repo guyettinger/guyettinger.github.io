@@ -1,9 +1,9 @@
 "use client"
 import { ReactNode } from "react";
-import { Card, Group, SimpleGrid, Stack, Text, Title } from "@mantine/core";
 import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
 
-const MotionGroup = motion(Group)
+const MotionDiv = motion.div
 
 interface SkillCardProps {
     children: ReactNode,
@@ -12,76 +12,72 @@ interface SkillCardProps {
 
 const SkillCard = ({children, backgroundColor = "#ffffff"}: SkillCardProps) => {
     return (
-        <Card p={0} shadow={"sm"} radius="md">
-            <MotionGroup
-                justify={'center'}
-                align={'center'}
-                py={'1rem'}
-                whileHover={{backgroundColor: backgroundColor}}>
+        <Card className="p-0 shadow-sm rounded-md">
+            <MotionDiv
+                className="flex items-center justify-center gap-2 py-4"
+                whileHover={{ backgroundColor }}
+            >
                 {children}
-            </MotionGroup>
+            </MotionDiv>
         </Card>
     )
 }
 
 export const Skills = () => {
     return (
-        <Stack py={2}>
-            <Title>Skills</Title>
-            <SimpleGrid cols={{base: 1, sm: 2, lg: 3, xl: 4}}
-                        py={'md'}
-                        spacing={'xl'}
-                        verticalSpacing={'xl'}>
+        <section className="py-2">
+            <h2 className="text-2xl font-semibold">Skills</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 py-4">
                 <SkillCard backgroundColor="#61DAFB90">
-                    <Text className="fa-brands fa-react react-icon" size={"1.5rem"}/>
-                    <Text>React</Text>
+                    <i className="fa-brands fa-react react-icon text-xl"/>
+                    <span>React</span>
                 </SkillCard>
                 <SkillCard backgroundColor="#303c52">
-                    <Text className="fa-brands fa-react react-native-icon" size={"1.5rem"}/>
-                    <Text>React Native</Text>
+                    <i className="fa-brands fa-react react-native-icon text-xl"/>
+                    <span>React Native</span>
                 </SkillCard>
                 <SkillCard backgroundColor="#264DE490">
-                    <Text className="fa-brands fa-t typescript-icon" size={"1.5rem"}/>
-                    <Text>Typescript</Text>
+                    <i className="fa-brands fa-t typescript-icon text-xl"/>
+                    <span>Typescript</span>
                 </SkillCard>
                 <SkillCard backgroundColor="#F7DF1E90">
-                    <Text className="fa-brands fa-js-square js-icon" size={"1.5rem"}/>
-                    <Text>JavaScript</Text>
+                    <i className="fa-brands fa-js-square js-icon text-xl"/>
+                    <span>JavaScript</span>
                 </SkillCard>
                 <SkillCard backgroundColor="#33993390">
-                    <Text className="fa-brands fa-node-js node-icon" size={"1.5rem"}/>
-                    <Text>Node</Text>
+                    <i className="fa-brands fa-node-js node-icon text-xl"/>
+                    <span>Node</span>
                 </SkillCard>
                 <SkillCard backgroundColor="#f1da4890">
-                    <Text className="fa-brands fa-python python-icon" size={"1.5rem"}/>
-                    <Text>Python</Text>
+                    <i className="fa-brands fa-python python-icon text-xl"/>
+                    <span>Python</span>
                 </SkillCard>
                 <SkillCard backgroundColor="#1eabf790">
-                    <Text className="fa-brands fa-golang golang-icon" size={"1.5rem"}/>
-                    <Text>Golang</Text>
+                    <i className="fa-brands fa-golang golang-icon text-xl"/>
+                    <span>Golang</span>
                 </SkillCard>
                 <SkillCard backgroundColor="#E34F2690">
-                    <Text className="fa-brands fa-angular angular-icon" size={"1.5rem"}/>
-                    <Text>Angular</Text>
+                    <i className="fa-brands fa-angular angular-icon text-xl"/>
+                    <span>Angular</span>
                 </SkillCard>
                 <SkillCard backgroundColor="#af1ef790">
-                    <Text className="fa-brands fa-microsoft code-icon" size={"1.5rem"}/>
-                    <Text>C#</Text>
+                    <i className="fa-brands fa-microsoft code-icon text-xl"/>
+                    <span>C#</span>
                 </SkillCard>
                 <SkillCard backgroundColor="#E34F2690">
-                    <Text className="fa-brands fa-html5 html-icon" size={"1.5rem"}/>
-                    <Text>HTML</Text>
+                    <i className="fa-brands fa-html5 html-icon text-xl"/>
+                    <span>HTML</span>
                 </SkillCard>
                 <SkillCard backgroundColor="#264DE490">
-                    <Text className="fa-brands fa-css3-alt css-icon" size={"1.5rem"}/>
-                    <Text>CSS</Text>
+                    <i className="fa-brands fa-css3-alt css-icon text-xl"/>
+                    <span>CSS</span>
                 </SkillCard>
-                <a href="https://www.linkedin.com/in/guyettinger/details/skills/" target="_blank">
+                <a href="https://www.linkedin.com/in/guyettinger/details/skills/" target="_blank" className="block">
                     <SkillCard backgroundColor="#264DE490">
-                        <Text className="fa-solid fa-ellipsis css-icon" size={"1.5rem"}/>
+                        <i className="fa-solid fa-ellipsis css-icon text-xl"/>
                     </SkillCard>
                 </a>
-            </SimpleGrid>
-        </Stack>
+            </div>
+        </section>
     )
 }

@@ -1,10 +1,10 @@
 "use client"
 import Link from "next/link";
-import { Box, ScrollAreaAutosize, Stack, Text, Title } from "@mantine/core";
 import { projectData } from "@/data/projectData";
 import { CardGallery, CardView } from "@/components/Cards";
 import { CardContext } from "@/components/Cards/cardContext";
 import { MarkdownDocument } from "@/components/Markdown";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface ProjectViewProps {
     project: typeof projectData[1]
@@ -20,12 +20,12 @@ const SmallProjectView = ({project}: ProjectViewProps) => {
                 <>
                     {!!project.demoLink &&
                         <Link href={project.demoLink} target="_blank">
-                            <Text className="fa-solid fa-link" size={"20px"}/>
+                            <i className="fa-solid fa-link text-[20px]"/>
                         </Link>
                     }
                     {!!project.gitHubLink &&
                         <Link href={project.gitHubLink} target="_blank">
-                            <Text className="fa-brands fa-github" size={"20px"}/>
+                            <i className="fa-brands fa-github text-[20px]"/>
                         </Link>
                     }
                 </>
@@ -43,30 +43,27 @@ const LargeProjectView = ({project}: ProjectViewProps) => {
             key={project.id}
             title={project.title}
             description={project.description}
-            miw={'60vw'}
-            maw={'60vw'}
-            mih={'50vh'}
-            mah={'80vh'}
+            className="min-w-[60vw] max-w-[60vw] min-h-[50vh] max-h-[80vh]"
             actionArea={
                 <>
                     {!!project.demoLink &&
                         <Link href={project.demoLink} target="_blank">
-                            <Text className="fa-solid fa-link" size={"20px"}/>
+                            <i className="fa-solid fa-link text-[20px]"/>
                         </Link>
                     }
                     {!!project.gitHubLink &&
                         <Link href={project.gitHubLink} target="_blank">
-                            <Text className="fa-brands fa-github" size={"20px"}/>
+                            <i className="fa-brands fa-github text-[20px]"/>
                         </Link>
                     }
                 </>
             }
         >
-            <ScrollAreaAutosize scrollbarSize={4}>
-                <Stack maw={'calc(60vw - 38px)'}>
+            <ScrollArea>
+                <div className="max-w-[calc(60vw-38px)]">
                     <MarkdownDocument url={readmeUrl} baseUrl={baseUrl}/>
-                </Stack>
-            </ScrollAreaAutosize>
+                </div>
+            </ScrollArea>
         </CardView>
     )
 }
@@ -82,11 +79,11 @@ projectData.forEach(project => {
 
 export const ProjectList = () => {
     return (
-        <Box p={2}>
-            <Title>Projects</Title>
-            <Stack py={'xl'}>
+        <section className="p-2">
+            <h2 className="text-2xl font-semibold">Projects</h2>
+            <div className="py-6">
                 <CardGallery cardContexts={cardContexts}/>
-            </Stack>
-        </Box>
+            </div>
+        </section>
     )
 }

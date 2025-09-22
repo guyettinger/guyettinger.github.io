@@ -1,12 +1,12 @@
 "use client"
 import { ReactNode } from "react";
 import Link from "next/link";
-import { Box, ScrollAreaAutosize, Stack, Text, Title } from "@mantine/core";
 import { learningData } from "@/data/learningData";
 import { CardContext } from "@/components/Cards/cardContext";
 import { CardGallery, CardView } from "@/components/Cards";
 import UnityEssentialsPathwayPage from "@/app/learning/unity/unityessentialspathway/page";
 import UnityARPathwayPage from "@/app/learning/unity/unityarpathway/page";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface LearningItemViewProps {
     learningItem: typeof learningData[1],
@@ -18,12 +18,12 @@ const SmallLearningItemView = ({learningItem, children}: LearningItemViewProps) 
         <CardView
             key={learningItem.id}
             title={learningItem.title}
-            iconArea={<Text className="fa-solid fa-graduation-cap" size={"20px"}/>}
+            iconArea={<i className="fa-solid fa-graduation-cap text-[20px]"/>}
             actionArea={
                 <>
                     {!!learningItem.link &&
                         <Link href={learningItem.link} target="_blank">
-                            <Text className="fa-solid fa-link" size={"20px"}/>
+                            <i className="fa-solid fa-link text-[20px]"/>
                         </Link>
                     }
                 </>
@@ -39,26 +39,23 @@ const LargeLearningItemView = ({learningItem, children}: LearningItemViewProps) 
         <CardView
             key={learningItem.id}
             title={learningItem.title}
-            miw={'60vw'}
-            maw={'60vw'}
-            mih={'50vh'}
-            mah={'80vh'}
-            iconArea={<Text className="fa-solid fa-graduation-cap" size={"20px"}/>}
+            className="min-w-[60vw] max-w-[60vw] min-h-[50vh] max-h-[80vh]"
+            iconArea={<i className="fa-solid fa-graduation-cap text-[20px]"/>}
             actionArea={
                 <>
                     {!!learningItem.link &&
                         <Link href={learningItem.link} target="_blank">
-                            <Text className="fa-solid fa-link" size={"20px"}/>
+                            <i className="fa-solid fa-link text-[20px]"/>
                         </Link>
                     }
                 </>
             }
         >
-            <ScrollAreaAutosize offsetScrollbars={true} scrollbarSize={4}>
-                <Box>
+            <ScrollArea className="max-h-[70vh]">
+                <div>
                     {children}
-                </Box>
-            </ScrollAreaAutosize>
+                </div>
+            </ScrollArea>
         </CardView>
     )
 }
@@ -84,11 +81,11 @@ learningData.forEach(learningItem => {
 
 export const LearningList = () => {
     return (
-        <Box py={2}>
-            <Title>Learning</Title>
-            <Stack py={'xl'}>
+        <section className="py-2">
+            <h2 className="text-2xl font-semibold">Learning</h2>
+            <div className="py-6">
                 <CardGallery cardContexts={cardContexts}/>
-            </Stack>
-        </Box>
+            </div>
+        </section>
     )
 }

@@ -1,31 +1,19 @@
-import { Group, Stack } from "@mantine/core";
 import { motion } from "framer-motion";
 import { CardModalProps } from "@/components/Cards/CardModal/CardModal.types";
 
-const MotionStack = motion(Stack)
+const MotionDiv = motion.div
 
 export const CardModal = ({cardContext, onClick}: CardModalProps) => {
     return (
-        <Group
-            className='card-container'
-            justify={'center'}
-            style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                bottom: 0,
-                right: 0,
-                pointerEvents: 'none',
-                zIndex: 4000,
-            }}
+        <div
+            className='card-container fixed inset-0 z-[4000] pointer-events-none flex items-center justify-center'
             onClick={onClick}>
-            <MotionStack
+            <MotionDiv
                 layoutId={cardContext.id}
-                className='card'
-                style={{pointerEvents: 'all'}}
+                className='card pointer-events-auto'
             >
                 {cardContext.largeView}
-            </MotionStack>
-        </Group>
+            </MotionDiv>
+        </div>
     );
 }

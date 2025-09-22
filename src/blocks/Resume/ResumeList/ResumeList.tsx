@@ -1,7 +1,6 @@
 "use client"
 import { ReactNode } from "react";
 import Link from "next/link";
-import { Box, ScrollAreaAutosize, Stack, Text, Title } from "@mantine/core";
 import { resumeData } from "@/data/resumeData";
 import { CardContext } from "@/components/Cards/cardContext";
 import { CardGallery, CardView } from "@/components/Cards";
@@ -9,6 +8,7 @@ import PointivoPage from "@/app/resume/pointivo/page";
 import AvidPage from "@/app/resume/avid/page";
 import NexidiaPage from "@/app/resume/nexidia/page";
 import InmanPerkCoffeePage from "@/app/resume/inmanperkcoffee/page";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface ResumeItemViewProps {
     resumeItem: typeof resumeData[1],
@@ -21,12 +21,12 @@ const SmallResumeItemView = ({resumeItem, children}: ResumeItemViewProps) => {
             key={resumeItem.id}
             title={resumeItem.company}
             description={resumeItem.title}
-            iconArea={<Text className="fa-solid fa-file-lines" size={"20px"}/>}
+            iconArea={<i className="fa-solid fa-file-lines text-[20px]"/>}
             actionArea={
                 <>
                     {!!resumeItem.link &&
                         <Link href={resumeItem.link} target="_blank">
-                            <Text className="fa-solid fa-link" size={"20px"}/>
+                            <i className="fa-solid fa-link text-[20px]"/>
                         </Link>
                     }
                 </>
@@ -43,26 +43,23 @@ const LargeResumeItemView = ({resumeItem, children}: ResumeItemViewProps) => {
             key={resumeItem.id}
             title={resumeItem.company}
             description={resumeItem.title}
-            miw={'60vw'}
-            maw={'60vw'}
-            mih={'50vh'}
-            mah={'80vh'}
-            iconArea={<Text className="fa-solid fa-file-lines" size={"20px"}/>}
+            className="min-w-[60vw] max-w-[60vw] min-h-[50vh] max-h-[80vh]"
+            iconArea={<i className="fa-solid fa-file-lines text-[20px]"/>}
             actionArea={
                 <>
                     {!!resumeItem.link &&
                         <Link href={resumeItem.link} target="_blank">
-                            <Text className="fa-solid fa-link" size={"20px"}/>
+                            <i className="fa-solid fa-link text-[20px]"/>
                         </Link>
                     }
                 </>
             }
         >
-            <ScrollAreaAutosize offsetScrollbars={true} scrollbarSize={4}>
-                <Box>
+            <ScrollArea className="max-h-[70vh]">
+                <div>
                     {children}
-                </Box>
-            </ScrollAreaAutosize>
+                </div>
+            </ScrollArea>
         </CardView>
     )
 }
@@ -94,11 +91,11 @@ resumeData.forEach(resumeItem => {
 
 export const ResumeList = () => {
     return (
-        <Box py={2}>
-            <Title>Portfolio</Title>
-            <Stack py={'xl'}>
+        <section className="py-2">
+            <h2 className="text-2xl font-semibold">Portfolio</h2>
+            <div className="py-6">
                 <CardGallery cardContexts={cardContexts}/>
-            </Stack>
-        </Box>
+            </div>
+        </section>
     )
 }

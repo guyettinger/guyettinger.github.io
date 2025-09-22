@@ -1,4 +1,3 @@
-import { GroupProps } from "@mantine/core";
+import { HTMLAttributes } from "react";
 
-export interface HeaderProps extends GroupProps {
-}
+export interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}

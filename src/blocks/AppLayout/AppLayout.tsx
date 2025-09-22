@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import { Box } from "@mantine/core";
 import { Header } from "@/blocks/Header";
 import { Footer } from "@/blocks/Footer";
 import { Background } from "@/blocks/Background";
@@ -11,46 +10,21 @@ const ContentHeight = `calc(100% - ${HeaderHeight}px - ${FooterHeight}px)`;
 export const AppLayout = ({children}: { children: ReactNode }) => {
 
     return (
-        <Box style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            display: "flex",
-            flexDirection: "column"
-        }}>
-            <Box style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                display: "flex",
-                flexDirection: "column"
-            }}>
-                <Box mah={HeaderHeight} mih={HeaderHeight}>
-                    <Header mah={HeaderHeight} mih={HeaderHeight}/>
-                </Box>
-                <Box mah={ContentHeight} mih={ContentHeight}>
+        <div className="absolute inset-0 flex flex-col">
+            <div className="absolute inset-0 flex flex-col">
+                <div style={{ minHeight: HeaderHeight, maxHeight: HeaderHeight }}>
+                    <Header/>
+                </div>
+                <div style={{ minHeight: ContentHeight, maxHeight: ContentHeight }}>
                     {children}
-                </Box>
-                <Box mah={FooterHeight} mih={FooterHeight}>
+                </div>
+                <div style={{ minHeight: FooterHeight, maxHeight: FooterHeight }}>
                     <Footer/>
-                </Box>
-            </Box>
-            <Box style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                display: "flex",
-                flexDirection: "column",
-                zIndex: -1
-            }}>
-                <Background/>
-            </Box>
-        </Box>
+                </div>
+            </div>
+            <div className="absolute inset-0 -z-10 flex flex-col">
+                {/*<Background/>*/}
+            </div>
+        </div>
     );
 }
