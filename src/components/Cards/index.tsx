@@ -1,4 +1,4 @@
-export * from './CardView'
+export * from './CardGallery';
+export * from './CardGrid';
 export * from './CardModal';
-export * from './CardGrid'
-export * from './CardGallery'
+export * from './CardView';

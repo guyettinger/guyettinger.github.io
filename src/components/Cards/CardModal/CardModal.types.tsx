@@ -1,6 +1,6 @@
-import { CardContext } from "@/components/Cards/cardContext";
+import { CardContext } from '@/components/Cards/cardContext';
 
 export interface CardModalProps {
-    cardContext: CardContext
-    onClick: () => void
+  cardContext: CardContext;
+  onClick: () => void;
 }

@@ -1,4 +1,4 @@
 export interface MarkdownDocumentProps {
-    url: string
-    baseUrl: string
+  url: string;
+  baseUrl: string;
 }

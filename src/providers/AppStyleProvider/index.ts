@@ -1,1 +1,1 @@
-export { AppStyleProvider } from './AppStyleProvider'
+export { AppStyleProvider } from './AppStyleProvider';

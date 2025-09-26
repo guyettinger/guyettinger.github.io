@@ -1,28 +1,26 @@
-"use client"
-import { Color } from "three";
-import { RootState } from "@react-three/fiber";
-import { PortalMaterial, ShaderCanvas } from "gle-r3f-components";
-import { useComputedColorScheme } from "@mantine/core";
+'use client';
+
+import { RootState } from '@react-three/fiber';
+import { PortalMaterial, ShaderCanvas } from 'gle-r3f-components';
+import { useTheme } from 'next-themes';
+import { Color } from 'three';
 
 export const Background = () => {
+  const { theme } = useTheme();
 
-    const colorScheme = useComputedColorScheme('dark');
+  const shaderMaterial = new PortalMaterial();
 
-    const shaderMaterial = new PortalMaterial()
+  if (theme === 'dark') {
+    shaderMaterial.uniforms.uColorStart.value = new Color('#353535');
+    shaderMaterial.uniforms.uColorEnd.value = new Color('#323232');
+  } else {
+    shaderMaterial.uniforms.uColorStart.value = new Color('#ffffff');
+    shaderMaterial.uniforms.uColorEnd.value = new Color('#cfcfcf');
+  }
 
-    if (colorScheme === 'dark') {
-        shaderMaterial.uniforms.uColorStart.value = new Color('#353535')
-        shaderMaterial.uniforms.uColorEnd.value = new Color('#323232')
-    } else {
-        shaderMaterial.uniforms.uColorStart.value = new Color('#ffffff')
-        shaderMaterial.uniforms.uColorEnd.value = new Color('#cfcfcf')
-    }
+  const renderCallback = (state: RootState, delta: number) => {
+    shaderMaterial.uniforms.uTime.value += delta;
+  };
 
-    const renderCallback = (state: RootState, delta: number) => {
-        shaderMaterial.uniforms.uTime.value += delta
-    }
-
-    return (
-        <ShaderCanvas shaderMaterial={shaderMaterial} renderCallback={renderCallback}/>
-    );
-}
+  return <ShaderCanvas shaderMaterial={shaderMaterial} renderCallback={renderCallback} />;
+};

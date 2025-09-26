@@ -1,1 +1,1 @@
-export * from './LearningList'
+export * from './LearningList';

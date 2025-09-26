@@ -1,1 +1,1 @@
-export { ResumeList } from './ResumeList'
+export { ResumeList } from './ResumeList';

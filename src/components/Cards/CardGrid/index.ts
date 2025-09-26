@@ -1,2 +1,2 @@
-export { type CardGridProps } from './CardGrid.types';
 export { CardGrid } from './CardGrid';
+export { type CardGridProps } from './CardGrid.types';

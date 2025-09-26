@@ -1,1 +1,1 @@
-export { useWebGLAvailable } from './useWebGLAvailable'
+export { useWebGLAvailable } from './useWebGLAvailable';
