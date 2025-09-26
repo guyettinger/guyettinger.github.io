@@ -48,7 +48,7 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
                   <li>
                     <NavigationMenuLink asChild>
                       <Link
-                        href="/pdfs/Resume-Guy-Ettinger-08-11-2024.pdf"
+                        href="/pdfs/Resume-Guy-Ettinger-2025.pdf"
                         target="_blank"
                         className="block rounded-md px-3 py-1.5 text-sm hover:bg-accent no-underline text-secondary-foreground"
                       >
