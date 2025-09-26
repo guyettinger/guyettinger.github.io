@@ -6,11 +6,11 @@ import { useTheme } from 'next-themes';
 import { Color } from 'three';
 
 export const Background = () => {
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
 
   const shaderMaterial = new PortalMaterial();
 
-  if (theme === 'dark') {
+  if (theme === 'dark' || (theme === 'system' && systemTheme === 'dark')) {
     shaderMaterial.uniforms.uColorStart.value = new Color('#353535');
     shaderMaterial.uniforms.uColorEnd.value = new Color('#323232');
   } else {
