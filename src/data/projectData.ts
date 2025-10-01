@@ -9,6 +9,15 @@ export const projectData = [
     demoLink: 'https://guyettinger.github.io/gle-vision-chat',
   },
   {
+    id: 'pour-my-friends',
+    title: 'Pour My Friends',
+    description: 'A latte art simulator.',
+    githubProject: 'guyettinger/PourMyFriends',
+    githubBranch: 'main',
+    gitHubLink: 'https://github.com/guyettinger/PourMyFriends',
+    demoLink: 'https://www.linkedin.com/feed/update/urn:li:activity:7367569881820577793/',
+  },
+  {
     id: 'gle-asl',
     title: 'GLE ASL Finger Spell',
     description: 'Practice ASL Finger Spelling using machine learning.',
