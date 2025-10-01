@@ -14,7 +14,7 @@ export const projectData = [
     description: 'A latte art simulator.',
     githubProject: 'guyettinger/PourMyFriends',
     githubBranch: 'main',
-    gitHubLink: 'https://github.com/guyettinger/PourMyFriends',
+    gitHubLink: '',
     demoLink: 'https://www.linkedin.com/feed/update/urn:li:activity:7367569881820577793/',
   },
   {
