@@ -1,5 +1,14 @@
 export const projectData = [
   {
+    id: 'gle-vision-chat',
+    title: 'GLE Vision Chat',
+    description: 'A simple, fast vision chat app.',
+    githubProject: 'guyettinger/gle-vision-chat',
+    githubBranch: 'main',
+    gitHubLink: 'https://github.com/guyettinger/gle-vision-chat',
+    demoLink: 'https://guyettinger.github.io/gle-vision-chat',
+  },
+  {
     id: 'gle-asl',
     title: 'GLE ASL Finger Spell',
     description: 'Practice ASL Finger Spelling using machine learning.',
