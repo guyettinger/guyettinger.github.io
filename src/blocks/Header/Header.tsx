@@ -15,10 +15,7 @@ import Link from 'next/link';
 
 export const Header = ({ className, ...rest }: HeaderProps) => {
   return (
-    <header
-      className={`w-full bg-background ${className ?? ''}`}
-      {...rest}
-    >
+    <header className={`w-full bg-background ${className ?? ''}`} {...rest}>
       <div className="mx-auto flex h-[60px] items-center justify-start px-4 sm:px-6 lg:px-8 gap-4">
         <div className="flex items-center gap-2">
           <div className="mx-2">
@@ -126,20 +123,27 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
                 <i className="fa-brands fa-github mr-2" /> Github Projects
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[.75fr_1fr] list-none">
+                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[1fr_1fr] list-none">
                   {projectData?.map((project) => (
                     <li key={project.id}>
                       <div className="flex items-center gap-2 text-sm font-medium">
                         <i className="fa-regular fa-folder-open" />
                         <span>{project.title}</span>
                       </div>
-                      <div className="mt-1 flex gap-2 pl-5">
+                      {project.description && (
+                        <div className="flex items-center gap-2 text-sm font-medium">
+                          <span className="text-xs text-muted-foreground">
+                            {project.description}
+                          </span>
+                        </div>
+                      )}
+                      <div className="mt-1 flex gap-2">
                         {project.gitHubLink && (
                           <NavigationMenuLink asChild>
                             <Link
                               href={project.gitHubLink}
                               target="_blank"
-                              className="block rounded-md px-3 py-1.5 text-sm hover:bg-accent no-underline text-secondary-foreground"
+                              className="block rounded-md px-3 py-1.5 text-xs hover:bg-accent no-underline text-secondary-foreground"
                             >
                               <i className="fa-brands fa-github" /> Github
                             </Link>
@@ -150,7 +154,7 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
                             <Link
                               href={project.demoLink}
                               target="_blank"
-                              className="block rounded-md px-3 py-1.5 text-sm hover:bg-accent no-underline text-secondary-foreground"
+                              className="block rounded-md px-3 py-1.5 text-xs hover:bg-accent no-underline text-secondary-foreground"
                             >
                               <i className="fa-solid fa-link" /> Demo
                             </Link>
