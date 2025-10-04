@@ -12,8 +12,30 @@ import {
 import { projectData } from '@/data/projectData';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 
 export const Header = ({ className, ...rest }: HeaderProps) => {
+  const imgRef = useRef<HTMLImageElement | null>(null);
+  const [rotationDeg, setRotationDeg] = useState<number>(0);
+
+  useEffect(() => {
+    const handleMove = (e: MouseEvent) => {
+      const img = imgRef.current;
+      if (!img) return;
+      const rect = img.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = e.clientX - cx;
+      const dy = e.clientY - cy;
+      const angleRad = Math.atan2(dy, dx); // 0 deg points to the right
+      const angleDeg = (-45 + angleRad * 180) / Math.PI;
+      setRotationDeg(angleDeg);
+    };
+
+    window.addEventListener('mousemove', handleMove);
+    return () => window.removeEventListener('mousemove', handleMove);
+  }, []);
+
   return (
     <header className={`w-full bg-background ${className ?? ''}`} {...rest}>
       <div className="mx-auto flex h-[60px] items-center justify-start px-4 sm:px-6 lg:px-8 gap-4">
@@ -21,9 +43,15 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
           <div className="mx-2">
             <Link href="/" className="text-lg font-medium no-underline hover:underline">
               <Image
+                ref={imgRef}
                 src="/images/avatar.png"
                 className="rounded-full"
-                style={{ margin: 0, verticalAlign: 'middle' }}
+                style={{
+                  margin: 0,
+                  verticalAlign: 'middle',
+                  transform: `rotate(${rotationDeg}deg)` ,
+                  transformOrigin: '50% 50%'
+                }}
                 width={80}
                 height={80}
                 alt="Guy Ettinger"
