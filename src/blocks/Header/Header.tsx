@@ -10,6 +10,7 @@ import {
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
 import { projectData } from '@/data/projectData';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
@@ -37,7 +38,7 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
   }, []);
 
   return (
-    <header className={`w-full bg-background ${className ?? ''}`} {...rest}>
+    <header className={cn('w-full bg-background', className)} {...rest}>
       <div className="mx-auto flex h-[60px] items-center justify-start px-4 sm:px-6 lg:px-8 gap-4">
         <div className="flex items-center gap-2">
           <div className="mx-2">
@@ -49,8 +50,8 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
                 style={{
                   margin: 0,
                   verticalAlign: 'middle',
-                  transform: `rotate(${rotationDeg}deg)` ,
-                  transformOrigin: '50% 50%'
+                  transform: `rotate(${rotationDeg}deg)`,
+                  transformOrigin: '50% 50%',
                 }}
                 width={80}
                 height={80}
