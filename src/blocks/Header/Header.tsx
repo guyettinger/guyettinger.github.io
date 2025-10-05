@@ -19,6 +19,10 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
   const imgRef = useRef<HTMLImageElement | null>(null);
   const [rotationDeg, setRotationDeg] = useState<number>(0);
 
+  type Beam = { id: number; x1: number; y1: number; x2: number; y2: number; color: string };
+  const [beams, setBeams] = useState<Beam[]>([]);
+  const beamIdRef = useRef(0);
+
   useEffect(() => {
     const handleMove = (e: MouseEvent) => {
       const img = imgRef.current;
@@ -33,14 +37,81 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
       setRotationDeg(angleDeg);
     };
 
+    const handleClick = (e: MouseEvent) => {
+      const img = imgRef.current;
+      if (!img) return;
+      const rect = img.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const tx = e.clientX;
+      const ty = e.clientY;
+      // Direction from center to target
+      const vx = tx - cx;
+      const vy = ty - cy;
+      const len = Math.hypot(vx, vy) || 1;
+      const ux = vx / len;
+      const uy = vy / len;
+      // Perpendicular for two-eye offset
+      const px = -uy;
+      const py = ux;
+      const offset = 6; // px separation between beams
+      const start1x = cx + px * offset;
+      const start1y = cy + py * offset;
+      const start2x = cx - px * offset;
+      const start2y = cy - py * offset;
+
+      setBeams((prev) => [
+        ...prev,
+        { id: ++beamIdRef.current, x1: start1x, y1: start1y, x2: tx, y2: ty, color: '#8cc81f' },
+        { id: ++beamIdRef.current, x1: start2x, y1: start2y, x2: tx, y2: ty, color: '#6dabda' },
+      ]);
+
+      // Clean up beams after short animation
+      window.setTimeout(() => {
+        setBeams((prev) => prev.slice(2));
+      }, 100);
+    };
+
     window.addEventListener('mousemove', handleMove);
-    return () => window.removeEventListener('mousemove', handleMove);
+    window.addEventListener('click', handleClick);
+    return () => {
+      window.removeEventListener('mousemove', handleMove);
+      window.removeEventListener('click', handleClick);
+    };
   }, []);
+
+  // Small component to animate a single laser line
+  const LaserLine = ({ beam }: { beam: Beam }) => {
+    const length = Math.hypot(beam.x2 - beam.x1, beam.y2 - beam.y1);
+    const [dashOffset, setDashOffset] = useState<number>(length);
+    useEffect(() => {
+      // Animate from full offset to 0 on mount
+      const raf = requestAnimationFrame(() => setDashOffset(0));
+      return () => cancelAnimationFrame(raf);
+    }, [length]);
+
+    return (
+      <line
+        x1={beam.x1}
+        y1={beam.y1}
+        x2={beam.x2}
+        y2={beam.y2}
+        stroke={beam.color}
+        strokeWidth={2.5}
+        strokeLinecap="round"
+        style={{
+          transition: 'stroke-dashoffset 50ms linear',
+          strokeDasharray: length,
+          strokeDashoffset: dashOffset,
+        }}
+      />
+    );
+  };
 
   return (
     <header className={cn('w-full bg-background', className)} {...rest}>
       <div className="mx-auto flex h-[60px] items-center justify-start px-4 sm:px-6 lg:px-8 gap-4">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 z-[2000]">
           <div className="mx-2">
             <Link href="/" className="text-lg font-medium no-underline hover:underline">
               <Image
@@ -251,6 +322,15 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
           </Link>
         </div>
       </div>
+
+      {/* Laser overlay */}
+      {beams.length > 0 && (
+        <svg className="pointer-events-none fixed inset-0 z-[1000]" width="100%" height="100%">
+          {beams.map((b) => (
+            <LaserLine key={b.id} beam={b} />
+          ))}
+        </svg>
+      )}
     </header>
   );
 };
