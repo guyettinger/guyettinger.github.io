@@ -43,7 +43,7 @@ const LargeProjectView = ({ project }: ProjectViewProps) => {
       key={project.id}
       title={project.title}
       description={project.description}
-      className="min-w-[60vw] max-w-[60vw] min-h-[50vh] max-h-[80vh]"
+      className="min-w-[95vw] max-w-[95vw] min-h-[50vh] max-h-[80vh] md:min-w-[60vw] md:max-w-[60vw] md:min-h-[50vh] md:max-h-[80vh]"
       actionArea={
         <>
           {!!project.demoLink && (

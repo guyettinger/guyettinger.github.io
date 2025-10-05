@@ -42,7 +42,7 @@ const LargeResumeItemView = ({ resumeItem, children }: ResumeItemViewProps) => {
       key={resumeItem.id}
       title={resumeItem.company}
       description={resumeItem.title}
-      className="min-w-[60vw] max-w-[60vw] min-h-[50vh] max-h-[80vh]"
+      className="min-w-[95vw] max-w-[95vw] min-h-[50vh] max-h-[80vh] md:min-w-[60vw] md:max-w-[60vw] md:min-h-[50vh] md:max-h-[80vh]"
       iconArea={<i className="fa-solid fa-file-lines text-[20px]" />}
       actionArea={
         <>
