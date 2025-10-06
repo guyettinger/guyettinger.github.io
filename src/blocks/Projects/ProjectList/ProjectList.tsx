@@ -61,7 +61,19 @@ const LargeProjectView = ({ project }: ProjectViewProps) => {
     >
       <ScrollArea>
         <div className="max-w-[calc(60vw-38px)]">
-          <MarkdownDocument url={readmeUrl} baseUrl={baseUrl} />
+          {!!project.gitHubLink && <MarkdownDocument url={readmeUrl} baseUrl={baseUrl} />}
+          {!!project.demoLink && (
+            <div className="text-center">
+              <Link
+                href={project.demoLink}
+                target="_blank"
+                className="inline-flex gap-1 items-center text-[20px]"
+              >
+                <i className="fa-solid fa-link " />
+                Demo Link
+              </Link>
+            </div>
+          )}
         </div>
       </ScrollArea>
     </CardView>

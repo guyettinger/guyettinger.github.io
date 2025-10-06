@@ -1,8 +1,8 @@
+import { AppLayout } from '@/blocks';
 import { AppProvider } from '@/providers/AppProvider';
 import type { Metadata } from 'next';
-import { ReactNode } from 'react';
-import { AppLayout } from '../blocks/AppLayout';
 import { Inter } from 'next/font/google';
+import { ReactNode } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,7 +15,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"

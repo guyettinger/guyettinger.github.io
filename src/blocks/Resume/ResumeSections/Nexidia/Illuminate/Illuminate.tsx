@@ -1,4 +1,5 @@
 import { Video } from '@/components/Video';
+import Image from 'next/image';
 
 export const Illuminate = () => {
   return (
@@ -6,10 +7,11 @@ export const Illuminate = () => {
       <h2>Illuminate</h2>
       <section>
         <h3>Screenshots</h3>
-        <img
+        <Image
           src={'/images/portfolio/nexidia/Illuminate.png'}
           alt={'Illuminate Report'}
-          width={640}
+          width={1045}
+          height={1999}
         />
       </section>
       <section>

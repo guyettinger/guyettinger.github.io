@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const MotionDiv = motion.div;
 
@@ -17,7 +18,7 @@ export const Hero = () => {
           ease: [0, 0.71, 0.2, 1.01],
         }}
       >
-        <img
+        <Image
           src="/images/heroshot.png"
           width={200}
           height={200}

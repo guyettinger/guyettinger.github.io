@@ -1,10 +1,12 @@
+import Image from 'next/image';
+
 export const Patent = () => {
   return (
     <section>
       <h2>Patents</h2>
       <section>
         <h3>US11216663B1</h3>
-        <img src={'/images/portfolio/pointivo/Patent.png'} alt={'Patent'} width={640} />
+        <Image src={'/images/portfolio/pointivo/Patent.png'} alt={'Patent'} width={600} height={374} />
         <br />
         <div style={{ width: '640px' }}>
           Systems and methods for generating of 3D information on a user display from processing of

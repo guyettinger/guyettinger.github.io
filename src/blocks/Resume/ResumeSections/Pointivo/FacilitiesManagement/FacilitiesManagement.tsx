@@ -9,13 +9,15 @@ export const FacilitiesManagement = () => {
         <img
           src={'/images/portfolio/pointivo/FacilitiesManagement1.png'}
           alt={'Facilities Management'}
-          width={640}
+          width={856}
+          height={700}
         />
         <br />
         <img
           src={'/images/portfolio/pointivo/FacilitiesManagement2.png'}
           alt={'Facilities Management'}
-          width={640}
+          width={1024}
+          height={577}
         />
       </section>
       <section>

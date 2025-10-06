@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export const About = () => {
   return (
     <section className="flex flex-col gap-4">
@@ -17,7 +19,9 @@ export const About = () => {
           </p>
         </div>
         <div className="min-w-[30vw] max-w-[30vw] max-md:min-w-0 max-md:max-w-full">
-          <img
+          <Image
+            width={3456}
+            height={2304}
             src="/images/coffeepowered.jpeg"
             alt="Powered by Coffee"
             className="rounded-lg w-full h-auto"

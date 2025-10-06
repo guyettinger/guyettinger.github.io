@@ -1,4 +1,5 @@
 import { Video } from '@/components/Video';
+import Image from 'next/image';
 
 export const Emmy = () => {
   return (
@@ -6,7 +7,7 @@ export const Emmy = () => {
       <h2>2015 Technical Emmy Award for Phonetic Indexing and Timing</h2>
       <section>
         <h3>Award</h3>
-        <img src={'/images/portfolio/nexidia/Emmy.png'} alt={'Emmy Award'} width={640} />
+        <Image src={'/images/portfolio/nexidia/Emmy.png'} alt={'Emmy Award'} width={720} height={960} />
       </section>
       <section>
         <h3>Presentation</h3>

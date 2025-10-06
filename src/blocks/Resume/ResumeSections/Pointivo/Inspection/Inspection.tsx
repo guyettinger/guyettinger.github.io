@@ -1,4 +1,5 @@
 import { Video } from '@/components/Video';
+import Image from 'next/image';
 
 export const Inspection = () => {
   return (
@@ -6,7 +7,7 @@ export const Inspection = () => {
       <h2>Inspection</h2>
       <section>
         <h3>Screenshots</h3>
-        <img src={'/images/portfolio/pointivo/Inspection.png'} alt={'Inspection'} width={640} />
+        <Image src={'/images/portfolio/pointivo/Inspection.png'} alt={'Inspection'} width={1999} height={1999} />
       </section>
       <section>
         <h3>Videos</h3>

@@ -1,4 +1,5 @@
 import { Video } from '@/components/Video';
+import Image from 'next/image';
 
 export const DialogueSearch = () => {
   return (
@@ -6,28 +7,32 @@ export const DialogueSearch = () => {
       <h2>Dialogue Search</h2>
       <section>
         <h3>Screenshots</h3>
-        <img
+        <Image
           src={'/images/portfolio/nexidia/DialogueSearch1.png'}
           alt={'Dialogue Search'}
-          width={640}
+          width={1366}
+          height={768}
         />
         <br />
-        <img
+        <Image
           src={'/images/portfolio/nexidia/DialogueSearch2.png'}
           alt={'Dialogue Search'}
-          width={640}
+          width={1366}
+          height={768}
         />
         <br />
-        <img
+        <Image
           src={'/images/portfolio/nexidia/DialogueSearch3.png'}
           alt={'Dialogue Search'}
-          width={640}
+          width={1366}
+          height={768}
         />
         <br />
-        <img
+        <Image
           src={'/images/portfolio/nexidia/DialogueSearchVideoPlayer.png'}
           alt={'Dialogue Search Video Player'}
-          width={640}
+          width={339}
+          height={671}
         />
       </section>
       <section>

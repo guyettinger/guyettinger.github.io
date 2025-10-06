@@ -1,4 +1,5 @@
 import { Video } from '@/components/Video';
+import Image from 'next/image';
 
 export const MediaCentralSearch = () => {
   return (
@@ -6,7 +7,7 @@ export const MediaCentralSearch = () => {
       <h2>Media Central</h2>
       <section>
         <h3>Search App Screenshot</h3>
-        <img src={'/images/portfolio/avid/AvidSearchApp.png'} alt={'Avid Search App'} width={640} />
+        <Image src={'/images/portfolio/avid/AvidSearchApp.png'} alt={'Avid Search App'} width={852} height={532} />
       </section>
       <section>
         <h3>Search App Basics Video</h3>
