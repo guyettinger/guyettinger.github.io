@@ -32,7 +32,10 @@ export const CardView = ({
 
       {!!children && (
         <div className="flex flex-1 w-full justify-center">
-          <ScrollArea type="always" className="flex-1 w-full max-h-[70vh] rounded-b-xl bg-[rgb(18,18,18)]">
+          <ScrollArea
+            type="always"
+            className="flex-1 w-full max-h-[70vh] rounded-b-xl bg-[rgb(18,18,18)]"
+          >
             <CardContent className="py-4">{children}</CardContent>
           </ScrollArea>
         </div>

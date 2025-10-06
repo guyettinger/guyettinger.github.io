@@ -7,9 +7,19 @@ export const Telecom = () => {
       <h2>Telecom</h2>
       <section>
         <h3>Screenshots</h3>
-        <Image src={'/images/portfolio/pointivo/Telecom1.png'} alt={'Telecom'} width={1200} height={800} />
+        <Image
+          src={'/images/portfolio/pointivo/Telecom1.png'}
+          alt={'Telecom'}
+          width={1200}
+          height={800}
+        />
         <br />
-        <Image src={'/images/portfolio/pointivo/Telecom2.png'} alt={'Telecom'} width={1024} height={720} />
+        <Image
+          src={'/images/portfolio/pointivo/Telecom2.png'}
+          alt={'Telecom'}
+          width={1024}
+          height={720}
+        />
       </section>
       <section>
         <h3>Videos</h3>

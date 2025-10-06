@@ -6,7 +6,12 @@ export const Patent = () => {
       <h2>Patents</h2>
       <section>
         <h3>US11216663B1</h3>
-        <Image src={'/images/portfolio/pointivo/Patent.png'} alt={'Patent'} width={600} height={374} />
+        <Image
+          src={'/images/portfolio/pointivo/Patent.png'}
+          alt={'Patent'}
+          width={600}
+          height={374}
+        />
         <br />
         <div style={{ width: '640px' }}>
           Systems and methods for generating of 3D information on a user display from processing of

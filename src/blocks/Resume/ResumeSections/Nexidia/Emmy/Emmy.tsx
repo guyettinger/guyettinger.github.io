@@ -7,7 +7,12 @@ export const Emmy = () => {
       <h2>2015 Technical Emmy Award for Phonetic Indexing and Timing</h2>
       <section>
         <h3>Award</h3>
-        <Image src={'/images/portfolio/nexidia/Emmy.png'} alt={'Emmy Award'} width={720} height={960} />
+        <Image
+          src={'/images/portfolio/nexidia/Emmy.png'}
+          alt={'Emmy Award'}
+          width={720}
+          height={960}
+        />
       </section>
       <section>
         <h3>Presentation</h3>

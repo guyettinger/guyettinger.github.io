@@ -7,7 +7,12 @@ export const Inspection = () => {
       <h2>Inspection</h2>
       <section>
         <h3>Screenshots</h3>
-        <Image src={'/images/portfolio/pointivo/Inspection.png'} alt={'Inspection'} width={1999} height={1999} />
+        <Image
+          src={'/images/portfolio/pointivo/Inspection.png'}
+          alt={'Inspection'}
+          width={1999}
+          height={1999}
+        />
       </section>
       <section>
         <h3>Videos</h3>
