@@ -1,4 +1,5 @@
 import { Video } from '@/components/Video';
+import Image from 'next/image';
 
 export const FacilitiesManagement = () => {
   return (
@@ -6,14 +7,14 @@ export const FacilitiesManagement = () => {
       <h2>Facilities Management</h2>
       <section>
         <h3>Screenshots</h3>
-        <img
+        <Image
           src={'/images/portfolio/pointivo/FacilitiesManagement1.png'}
           alt={'Facilities Management'}
           width={856}
           height={700}
         />
         <br />
-        <img
+        <Image
           src={'/images/portfolio/pointivo/FacilitiesManagement2.png'}
           alt={'Facilities Management'}
           width={1024}
