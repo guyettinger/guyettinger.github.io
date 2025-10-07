@@ -140,7 +140,7 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
           <NavigationMenuList>
             <NavigationMenuItem>
               <NavigationMenuTrigger>
-                <i className="fa-solid fa-scroll mr-2" /> Resume
+                Resume
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[1fr_1fr] list-none">
@@ -172,7 +172,7 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
 
             <NavigationMenuItem>
               <NavigationMenuTrigger>
-                <i className="fa-solid fa-photo-film mr-2" /> Portfolio
+                Portfolio
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[.75fr_1fr] list-none">
@@ -222,14 +222,13 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
 
             <NavigationMenuItem>
               <NavigationMenuTrigger>
-                <i className="fa-brands fa-github mr-2" /> Github Projects
+                Github Projects
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[1fr_1fr] list-none">
                   {projectData?.map((project) => (
                     <li key={project.id}>
-                      <div className="flex items-center gap-2 text-sm font-medium">
-                        <i className="fa-regular fa-folder-open" />
+                      <div className="flex items-center gap-2 text-sm text-foreground font-medium">
                         <span>{project.title}</span>
                       </div>
                       {project.description && (
@@ -271,7 +270,7 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
 
             <NavigationMenuItem>
               <NavigationMenuTrigger>
-                <i className="fa-solid fa-graduation-cap mr-2" /> Learning
+                Learning
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[.75fr_1fr] list-none">
