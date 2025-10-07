@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 export const Patent = () => {
   return (
-    <section>
+    <section className="flex flex-col items-center">
       <h2>Patents</h2>
-      <section>
+      <section className="flex flex-col items-center">
         <h3>US11216663B1</h3>
         <Image
           src={'/images/portfolio/pointivo/Patent.png'}
@@ -19,7 +19,7 @@ export const Patent = () => {
           thereon
         </div>
       </section>
-      <section>
+      <section className="flex flex-col items-center">
         <h3>Press</h3>
         <a
           href={

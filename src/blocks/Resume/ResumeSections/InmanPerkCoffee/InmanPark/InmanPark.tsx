@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 export const InmanPark = () => {
   return (
-    <section>
+    <section className="flex flex-col items-center">
       <h2>Inman Park</h2>
-      <section>
+      <section className="flex flex-col items-center">
         <h3>Rosetta</h3>
         <Image
           src={'/images/portfolio/inmanperkcoffee/inmanpark/Rosetta.png'}
@@ -13,7 +13,7 @@ export const InmanPark = () => {
           height={604}
         />
       </section>
-      <section>
+      <section className="flex flex-col items-center">
         <h3>Counter</h3>
         <Image
           src={'/images/portfolio/inmanperkcoffee/inmanpark/Seating1.png'}

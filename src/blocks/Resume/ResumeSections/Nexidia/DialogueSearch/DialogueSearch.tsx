@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export const DialogueSearch = () => {
   return (
-    <section>
+    <section className="flex flex-col items-center">
       <h2>Dialogue Search</h2>
-      <section>
+      <section className="flex flex-col items-center">
         <h3>Screenshots</h3>
         <Image
           src={'/images/portfolio/nexidia/DialogueSearch1.png'}
@@ -35,7 +35,7 @@ export const DialogueSearch = () => {
           height={671}
         />
       </section>
-      <section>
+      <section className="flex flex-col items-center">
         <h3>Videos</h3>
         <Video
           title={"Searching For The Right Word (Nexidia's Dialogue Search)"}
