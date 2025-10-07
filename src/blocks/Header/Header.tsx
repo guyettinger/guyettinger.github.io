@@ -9,6 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
+import { Switch } from '@/components/ui/switch';
 import { projectData } from '@/data/projectData';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -18,6 +19,7 @@ import { useEffect, useRef, useState } from 'react';
 export const Header = ({ className, ...rest }: HeaderProps) => {
   const imgRef = useRef<HTMLImageElement | null>(null);
   const [rotationDeg, setRotationDeg] = useState<number>(0);
+  const [laserMode, setLaserMode] = useState<boolean>(false);
 
   type Beam = { id: number; x1: number; y1: number; x2: number; y2: number; color: string };
   const [beams, setBeams] = useState<Beam[]>([]);
@@ -301,6 +303,13 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
 
         <div className="flex-1"></div>
         <div className="flex items-center gap-4">
+          <label htmlFor="laser-mode" className="text-sm text-foreground font-extralight">{laserMode ? 'with lasers' : 'without lasers'}</label>
+          <Switch
+            id="laser-mode"
+            title="laser mode"
+            checked={laserMode}
+            onCheckedChange={(checked) => setLaserMode(checked)}
+          />
           <ThemeToggle />
           <Link
             href="https://github.com/guyettinger"
@@ -324,7 +333,7 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
       </div>
 
       {/* Laser overlay */}
-      {beams.length > 0 && (
+      {laserMode && beams.length > 0 && (
         <svg className="pointer-events-none fixed inset-0 z-[1000]" width="100%" height="100%">
           {beams.map((b) => (
             <LaserLine key={b.id} beam={b} />
