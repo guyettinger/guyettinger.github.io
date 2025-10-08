@@ -302,6 +302,7 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
 
         <div className="flex-1"></div>
         <div className="flex items-center gap-4">
+          <ThemeToggle />
           <label htmlFor="laser-mode" className="text-sm text-foreground font-extralight">{laserMode ? 'with lasers' : 'without lasers'}</label>
           <Switch
             id="laser-mode"
@@ -309,7 +310,6 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
             checked={laserMode}
             onCheckedChange={(checked) => setLaserMode(checked)}
           />
-          <ThemeToggle />
           <Link
             href="https://github.com/guyettinger"
             aria-label="GitHub"
