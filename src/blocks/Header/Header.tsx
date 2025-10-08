@@ -228,7 +228,7 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[1fr_1fr] list-none">
                   {projectData?.map((project) => (
                     <li key={project.id}>
-                      <div className="flex items-center gap-2 text-sm text-foreground font-medium">
+                      <div className="flex items-center gap-2 text-sm text-secondary-foreground font-medium">
                         <span>{project.title}</span>
                       </div>
                       {project.description && (
