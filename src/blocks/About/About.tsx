@@ -11,11 +11,12 @@ export const About = () => {
             massive amounts of coffee while doing it ...
           </p>
           <p>
-            Emmy Award-winning full-stack software engineer with 20+ years building scalable
-            applications and leading engineering teams. Proven track record of architecting
-            solutions from mobile apps to complex 3D visualization systems, with expertise in
-            TypeScript, React/Angular ecosystems, and cloud platforms.
+            Emmy Award-winning full-stack software engineer with a caffeine addiction and 20+ years
+            building scalable applications and leading engineering teams. Proven track record of
+            architecting solutions from mobile apps to complex 3D visualization systems, with
+            expertise in TypeScript, React/Angular ecosystems, and cloud platforms.
           </p>
+          <p>... and I can make a decent cup of coffee.</p>
         </div>
         <div className="min-w-[30vw] max-w-[30vw] max-md:min-w-0 max-md:max-w-full">
           <Image
