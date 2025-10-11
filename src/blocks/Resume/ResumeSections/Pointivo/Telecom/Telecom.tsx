@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export const Telecom = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section>
       <h2>Telecom</h2>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Screenshots</h3>
         <Image
           src={'/images/portfolio/pointivo/Telecom1.png'}
@@ -21,7 +21,7 @@ export const Telecom = () => {
           height={720}
         />
       </section>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Videos</h3>
         <Video
           title={'Pointivo Tower Inspection for Telecom'}

@@ -36,7 +36,7 @@ export const CardView = ({
             type="always"
             className="flex-1 w-full max-h-[70vh] rounded-b-xl bg-[rgb(18,18,18)]"
           >
-            <CardContent className="py-4">{children}</CardContent>
+            <CardContent className="py-4 dark">{children}</CardContent>
           </ScrollArea>
         </div>
       )}

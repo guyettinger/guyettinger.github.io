@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 export const Illuminate = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section>
       <h2>Illuminate</h2>
-      <section className="flex flex-col items-center">
+      <section>
         <Image
           src={'/images/portfolio/avid/AvidIlluminate.png'}
           alt={'Avid Illuminate'}

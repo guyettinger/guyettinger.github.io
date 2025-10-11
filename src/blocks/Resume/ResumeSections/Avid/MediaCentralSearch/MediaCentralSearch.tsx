@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export const MediaCentralSearch = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section>
       <h2>Media Central</h2>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Search App Screenshot</h3>
         <Image
           src={'/images/portfolio/avid/AvidSearchApp.png'}
@@ -14,7 +14,7 @@ export const MediaCentralSearch = () => {
           height={532}
         />
       </section>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Search App Basics Video</h3>
         <Video title={'Search App Basics'} id={'cKCPyCIRHVw'} width={640} height={360} />
       </section>

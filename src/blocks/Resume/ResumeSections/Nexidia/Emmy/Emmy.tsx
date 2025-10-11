@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export const Emmy = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section>
       <h2>2015 Technical Emmy Award for Phonetic Indexing and Timing</h2>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Award</h3>
         <Image
           src={'/images/portfolio/nexidia/Emmy.png'}
@@ -14,7 +14,7 @@ export const Emmy = () => {
           height={960}
         />
       </section>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Presentation</h3>
         <Video title={'Emmy Award Presentation'} id={'6Z9UNWp7vTQ'} width={640} height={360} />
       </section>

@@ -7,13 +7,13 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 const Page = () => {
   return (
     <ScrollArea className="flex-1">
-      <div className="mx-auto max-w-5xl px-6 py-8 flex flex-col items-center gap-6">
-        <h1 className="text-3xl font-semibold">Pointivo</h1>
+      <article className="mx-auto max-w-5xl px-6 py-8 flex flex-col prose prose-xs dark:prose-invert">
+        <h1>Pointivo</h1>
         <Inspection />
         <Telecom />
         <FacilitiesManagement />
         <Patent />
-      </div>
+      </article>
     </ScrollArea>
   );
 };

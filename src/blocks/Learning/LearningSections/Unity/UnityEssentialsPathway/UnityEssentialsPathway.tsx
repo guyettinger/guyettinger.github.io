@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 export const UnityEssentialsPathway = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section>
       <h2>Unity Essentials Pathway</h2>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Lego Game</h3>
         <Image
           src={'/images/portfolio/unity/LegoGame.png'}

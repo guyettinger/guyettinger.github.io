@@ -28,7 +28,7 @@ export const Hero = () => {
         />
       </MotionDiv>
       <div className="flex items-center gap-3">
-        <h1 className="text-3xl font-semibold">Hi, I'm Guy</h1>
+        <h1>Hi, I'm Guy</h1>
         <MotionDiv
           animate={{ rotate: [0, 0, 0, 90, 90, 0] }}
           whileHover={{ rotate: [0, 0, 0, 90, 90, 0] }}

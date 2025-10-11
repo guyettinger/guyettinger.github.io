@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 export const UnityARPathway = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section>
       <h2>Unity AR Pathway</h2>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>AR Butterfly</h3>
         <Image
           src={'/images/portfolio/unity/ARButterfly.png'}
@@ -13,7 +13,7 @@ export const UnityARPathway = () => {
           height={1282}
         />
       </section>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>AR Friend</h3>
         <Image
           src={'/images/portfolio/unity/ARFriend.png'}
@@ -22,7 +22,7 @@ export const UnityARPathway = () => {
           height={887}
         />
       </section>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>AR Portal</h3>
         <Image
           src={'/images/portfolio/unity/ARPortal.png'}

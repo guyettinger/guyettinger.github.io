@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export const Inspection = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section>
       <h2>Inspection</h2>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Screenshots</h3>
         <Image
           src={'/images/portfolio/pointivo/Inspection.png'}
@@ -14,7 +14,7 @@ export const Inspection = () => {
           height={1999}
         />
       </section>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Videos</h3>
         <Video
           title={'Pointivo Launches New AI-Powered, Digital Twin Product for Asset Inspection'}

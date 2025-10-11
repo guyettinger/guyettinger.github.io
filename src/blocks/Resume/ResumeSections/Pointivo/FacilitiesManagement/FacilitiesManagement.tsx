@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 export const FacilitiesManagement = () => {
   return (
-    <section className="flex flex-col items-center">
+    <section>
       <h2>Facilities Management</h2>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Screenshots</h3>
         <Image
           src={'/images/portfolio/pointivo/FacilitiesManagement1.png'}
@@ -21,7 +21,7 @@ export const FacilitiesManagement = () => {
           height={577}
         />
       </section>
-      <section className="flex flex-col items-center">
+      <section>
         <h3>Videos</h3>
         <Video
           title={'Pointivo Facility Management Promo Reel | IRE 2020'}
