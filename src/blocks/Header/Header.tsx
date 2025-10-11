@@ -16,12 +16,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
+type Beam = { id: number; x1: number; y1: number; x2: number; y2: number; color: string };
+
 export const Header = ({ className, ...rest }: HeaderProps) => {
   const imgRef = useRef<HTMLImageElement | null>(null);
   const [rotationDeg, setRotationDeg] = useState<number>(0);
   const [laserMode, setLaserMode] = useState<boolean>(false);
-
-  type Beam = { id: number; x1: number; y1: number; x2: number; y2: number; color: string };
   const [beams, setBeams] = useState<Beam[]>([]);
   const beamIdRef = useRef(0);
 
@@ -118,16 +118,16 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
             <Link href="/" className="text-lg font-medium no-underline hover:underline">
               <Image
                 ref={imgRef}
-                src="/images/avatar.png"
-                className="rounded-full"
+                src="/images/logo.svg"
+                className="rounded-full bg-white"
                 style={{
                   margin: 0,
                   verticalAlign: 'middle',
                   transform: `rotate(${rotationDeg}deg)`,
                   transformOrigin: '50% 50%',
                 }}
-                width={80}
-                height={80}
+                width={48}
+                height={48}
                 alt="Guy Ettinger"
                 priority={true}
               />

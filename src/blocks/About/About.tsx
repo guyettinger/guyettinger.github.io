@@ -7,15 +7,14 @@ export const About = () => {
       <div className="flex flex-row flex-nowrap items-start gap-6 max-md:flex-col">
         <div className="flex flex-col gap-4 text-lg">
           <p>
-            I specialize in designing and implementing exceptional user experiences (and drinking
-            massive amounts of coffee).
+            I specialize in designing and implementing exceptional user experiences ... and drinking
+            massive amounts of coffee while doing it ...
           </p>
           <p>
-            As an engineer, I have always been passionate about creating elegant and effective
-            solutions to complex problems. I have a strong foundation in software development, with
-            a focus on emerging technologies. I enjoy working on both the front-end and back-end of
-            applications, and I am always looking for ways to improve everyone experience (user and
-            engineer alike).
+            Emmy Award-winning full-stack software engineer with 20+ years building scalable
+            applications and leading engineering teams. Proven track record of architecting
+            solutions from mobile apps to complex 3D visualization systems, with expertise in
+            TypeScript, React/Angular ecosystems, and cloud platforms.
           </p>
         </div>
         <div className="min-w-[30vw] max-w-[30vw] max-md:min-w-0 max-md:max-w-full">
@@ -25,6 +24,7 @@ export const About = () => {
             src="/images/coffeepowered.jpeg"
             alt="Powered by Coffee"
             className="rounded-lg w-full h-auto"
+            priority={true}
           />
         </div>
       </div>

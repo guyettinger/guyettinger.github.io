@@ -20,10 +20,11 @@ export const Hero = () => {
       >
         <Image
           src="/images/heroshot.png"
-          width={200}
-          height={200}
+          width={335}
+          height={333}
           alt="Guy"
-          className="rounded-full"
+          className="rounded-full w-[200px]"
+          priority={true}
         />
       </MotionDiv>
       <div className="flex items-center gap-3">
