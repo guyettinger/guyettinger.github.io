@@ -3,20 +3,21 @@ import Image from 'next/image';
 export const About = () => {
   return (
     <section className="flex flex-col gap-4">
-      <h2 className="text-2xl font-semibold">About Me</h2>
+      <h2>About Me</h2>
       <div className="flex flex-row flex-nowrap items-start gap-6 max-md:flex-col">
-        <div className="flex flex-col gap-4 text-lg">
+        <div className="flex flex-col text-lg">
           <p>
-            I specialize in designing and implementing exceptional user experiences ... and drinking
-            massive amounts of coffee while doing it ...
+            I love crafting user experiences that make people's lives easier (all while drinking an
+            arguably unhealthy amount of coffee).
           </p>
           <p>
-            Emmy Award-winning full-stack software engineer with a caffeine addiction and 20+ years
-            building scalable applications and leading engineering teams. Proven track record of
-            architecting solutions from mobile apps to complex 3D visualization systems, with
-            expertise in TypeScript, React/Angular ecosystems, and cloud platforms.
+            I'm an Emmy Award-winning full-stack engineer who's spent 20+ years building everything
+            from mobile apps to complex 3D visualization systems. But here's what I've learned: the
+            best code comes from great collaboration. Whether I'm architecting solutions in
+            TypeScript and React, leading engineering teams, or diving into cloud platforms, I'm all
+            about finding elegant solutions together—preferably over a good cup of coffee.
           </p>
-          <p>... and I can make a decent cup of coffee.</p>
+          <p>Let's build something great.</p>
         </div>
         <div className="min-w-[30vw] max-w-[30vw] max-md:min-w-0 max-md:max-w-full">
           <Image

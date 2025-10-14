@@ -80,7 +80,7 @@ learningData.forEach((learningItem) => {
 export const LearningList = () => {
   return (
     <section className="py-2">
-      <h2 className="text-2xl font-semibold">Learning</h2>
+      <h2>Learning</h2>
       <div className="py-6">
         <CardGallery cardContexts={cardContexts} />
       </div>

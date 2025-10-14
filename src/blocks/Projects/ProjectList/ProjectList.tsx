@@ -60,21 +60,21 @@ const LargeProjectView = ({ project }: ProjectViewProps) => {
       }
     >
       <ScrollArea>
-        <div className="max-w-[calc(60vw-38px)]">
+        <article className="max-w-full prose prose-sm dark:prose-invert prose-a:text-primary">
           {!!project.gitHubLink && <MarkdownDocument url={readmeUrl} baseUrl={baseUrl} />}
           {!!project.demoLink && (
-            <div className="text-center">
+            <div className="text-center p-2">
               <Link
                 href={project.demoLink}
                 target="_blank"
-                className="inline-flex gap-1 items-center text-[20px]"
+                className="inline-flex gap-1 items-center text-[20px] no-underline"
               >
                 <i className="fa-solid fa-link " />
                 Demo Link
               </Link>
             </div>
           )}
-        </div>
+        </article>
       </ScrollArea>
     </CardView>
   );
@@ -92,7 +92,7 @@ projectData.forEach((project) => {
 export const ProjectList = () => {
   return (
     <section className="p-2">
-      <h2 className="text-2xl font-semibold">Projects</h2>
+      <h2>Projects</h2>
       <div className="py-6">
         <CardGallery cardContexts={cardContexts} />
       </div>

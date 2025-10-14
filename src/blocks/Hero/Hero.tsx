@@ -33,7 +33,7 @@ export const Hero = () => {
           animate={{ rotate: [0, 0, 0, 90, 90, 0] }}
           whileHover={{ rotate: [0, 0, 0, 90, 90, 0] }}
         >
-          <h1 className="text-3xl">👋</h1>
+          <h1>👋</h1>
         </MotionDiv>
       </div>
     </section>

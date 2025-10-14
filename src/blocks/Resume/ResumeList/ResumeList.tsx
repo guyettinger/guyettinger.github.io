@@ -54,7 +54,7 @@ const LargeResumeItemView = ({ resumeItem, children }: ResumeItemViewProps) => {
         </>
       }
     >
-      <div>{children}</div>
+      <article className="max-w-full prose prose-sm dark:prose-invert prose-a:text-primary">{children}</article>
     </CardView>
   );
 };
@@ -87,7 +87,7 @@ resumeData.forEach((resumeItem) => {
 export const ResumeList = () => {
   return (
     <section className="py-2">
-      <h2 className="text-2xl font-semibold">Portfolio</h2>
+      <h2>Portfolio</h2>
       <div className="py-6">
         <CardGallery cardContexts={cardContexts} />
       </div>

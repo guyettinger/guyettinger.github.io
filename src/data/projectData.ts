@@ -6,7 +6,7 @@ export const projectData = [
     githubProject: 'guyettinger/gle-vision-chat',
     githubBranch: 'main',
     gitHubLink: 'https://github.com/guyettinger/gle-vision-chat',
-    demoLink: 'https://guyettinger.github.io/gle-vision-chat',
+    demoLink: 'https://gle-vision-chat.vercel.app/',
   },
   {
     id: 'pour-my-friends',
