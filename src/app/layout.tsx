@@ -26,7 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           referrerPolicy="no-referrer"
         />
       </head>
-      <body lang="en" className={inter.className}>
+      <body lang="en" className={`${inter.className} antialiased`}>
         <AppProvider>
           <AppLayout>{children}</AppLayout>
         </AppProvider>
