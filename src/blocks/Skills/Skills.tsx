@@ -12,7 +12,7 @@ interface SkillCardProps {
 
 const SkillCard = ({ children, backgroundColor = '#ffffff' }: SkillCardProps) => {
   return (
-    <Card className="p-0 shadow-sm rounded-md">
+    <Card className="p-0 shadow-sm rounded-md cursor-pointer">
       <MotionDiv
         className="flex items-center justify-center gap-2 py-4 rounded-md"
         whileHover={{ backgroundColor }}

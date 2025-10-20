@@ -19,7 +19,7 @@ export const About = () => {
           </p>
           <p>Let's build something great.</p>
         </div>
-        <div className="min-w-[30vw] max-w-[30vw] max-md:min-w-0 max-md:max-w-full">
+        <div>
           <Image
             width={3456}
             height={2304}

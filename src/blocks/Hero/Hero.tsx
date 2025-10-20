@@ -23,7 +23,7 @@ export const Hero = () => {
           width={335}
           height={333}
           alt="Guy"
-          className="rounded-full w-[200px]"
+          className="rounded-full w-[200px] cursor-pointer"
           priority={true}
         />
       </MotionDiv>
@@ -33,7 +33,7 @@ export const Hero = () => {
           animate={{ rotate: [0, 0, 0, 90, 90, 0] }}
           whileHover={{ rotate: [0, 0, 0, 90, 90, 0] }}
         >
-          <h1>👋</h1>
+          <h1 className="cursor-pointer">👋</h1>
         </MotionDiv>
       </div>
     </section>
