@@ -1,8 +1,15 @@
 'use client';
 import AvidPage from '@/app/resume/avid/page';
+import AppliedGlobalTechnologiesPage from '@/app/resume/appliedglobaltechnologies/page';
+import FilmhubPage from '@/app/resume/filmhub/page';
+import FlairePageComponent from '@/app/resume/flaire/page';
+import GeorgiaTechPage from '@/app/resume/georgiatech/page';
 import InmanPerkCoffeePage from '@/app/resume/inmanperkcoffee/page';
 import NexidiaPage from '@/app/resume/nexidia/page';
+import PerspectiveLabsPage from '@/app/resume/perspectivelabs/page';
 import PointivoPage from '@/app/resume/pointivo/page';
+import RockstarPowerSuitePage from '@/app/resume/rockstarpowersuite/page';
+import VerceptPage from '@/app/resume/vercept/page';
 import { CardGallery, CardView } from '@/components/Cards';
 import { CardContext } from '@/components/Cards/cardContext';
 import { resumeData } from '@/data/resumeData';
@@ -54,7 +61,9 @@ const LargeResumeItemView = ({ resumeItem, children }: ResumeItemViewProps) => {
         </>
       }
     >
-      <article className="max-w-full prose prose-sm dark:prose-invert prose-a:text-primary">{children}</article>
+      <article className="max-w-full prose prose-sm dark:prose-invert prose-a:text-primary">
+        {children}
+      </article>
     </CardView>
   );
 };
@@ -63,6 +72,15 @@ const cardContexts: CardContext[] = [];
 resumeData.forEach((resumeItem) => {
   let largeViewChildren: ReactNode | null = null;
   switch (resumeItem.id) {
+    case 'vercept':
+      largeViewChildren = <VerceptPage />;
+      break;
+    case 'filmhub':
+      largeViewChildren = <FilmhubPage />;
+      break;
+    case 'flaire':
+      largeViewChildren = <FlairePageComponent />;
+      break;
     case 'pointivo':
       largeViewChildren = <PointivoPage />;
       break;
@@ -74,6 +92,18 @@ resumeData.forEach((resumeItem) => {
       break;
     case 'inmanperkcoffee':
       largeViewChildren = <InmanPerkCoffeePage />;
+      break;
+    case 'rockstarpowersuite':
+      largeViewChildren = <RockstarPowerSuitePage />;
+      break;
+    case 'perspectivelabs':
+      largeViewChildren = <PerspectiveLabsPage />;
+      break;
+    case 'appliedglobaltechnologies':
+      largeViewChildren = <AppliedGlobalTechnologiesPage />;
+      break;
+    case 'georgiatech':
+      largeViewChildren = <GeorgiaTechPage />;
       break;
   }
 

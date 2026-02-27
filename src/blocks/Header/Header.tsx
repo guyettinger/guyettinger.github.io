@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import { Switch } from '@/components/ui/switch';
 import { projectData } from '@/data/projectData';
+import { resumeData } from '@/data/resumeData';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -175,47 +176,20 @@ export const Header = ({ className, ...rest }: HeaderProps) => {
                 Portfolio
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[600px] lg:grid-cols-[.75fr_1fr] list-none">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/resume/pointivo"
-                        className="block rounded-md px-3 py-1.5 text-sm hover:bg-accent no-underline text-secondary-foreground"
-                      >
-                        Pointivo
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/resume/avid"
-                        className="block rounded-md px-3 py-1.5 text-sm hover:bg-accent no-underline text-secondary-foreground"
-                      >
-                        Avid
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/resume/nexidia"
-                        className="block rounded-md px-3 py-1.5 text-sm hover:bg-accent no-underline text-secondary-foreground"
-                      >
-                        Nexidia
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="/resume/inmanperkcoffee"
-                        className="block rounded-md px-3 py-1.5 text-sm hover:bg-accent no-underline text-secondary-foreground"
-                      >
-                        Inman Perk Coffee
-                      </Link>
-                    </NavigationMenuLink>
-                  </li>
+                <ul className="grid gap-1 p-4 md:w-[400px] lg:w-[560px] lg:grid-cols-2 list-none">
+                  {resumeData.map((entry) => (
+                    <li key={entry.id}>
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href={entry.link}
+                          className="flex flex-col rounded-md px-3 py-2 hover:bg-accent no-underline"
+                        >
+                          <span className="text-sm text-secondary-foreground">{entry.company}</span>
+                          <span className="text-[11px] text-muted-foreground">{entry.title}</span>
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  ))}
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
