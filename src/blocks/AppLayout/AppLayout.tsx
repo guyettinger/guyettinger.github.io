@@ -9,8 +9,8 @@ const ContentHeight = `calc(100% - ${HeaderHeight}px - ${FooterHeight}px)`;
 
 export const AppLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="absolute flex flex-col w-full">
-      <div className="relative flex flex-col">
+    <div className="absolute flex flex-col w-full h-full">
+      <div className="relative flex flex-col h-full">
         <div style={{ minHeight: HeaderHeight, maxHeight: HeaderHeight, zIndex: 1 }}>
           <Header />
         </div>
