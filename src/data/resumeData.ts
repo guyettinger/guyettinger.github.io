@@ -58,7 +58,7 @@ export const resumeData = [
   {
     id: 'rockstarpowersuite',
     company: 'Rockstar Power Suite',
-    title: 'Lead Software Engineer / Full Stack Designer / Animator',
+    title: 'Lead Software Engineer',
     startDate: 'Sep 2008',
     endDate: 'Jul 2012',
     link: '/resume/rockstarpowersuite',
