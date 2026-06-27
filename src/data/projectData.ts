@@ -2,7 +2,7 @@ export const projectData = [
   {
     id: 'emergence-in-a-cup',
     title: 'Emergence in a Cup',
-    description: 'An interactive lens on emergent dynamics using a latte.',
+    description: 'An interactive lens on emergent dynamics using a latte art.',
     githubProject: 'guyettinger/EmergenceInACup',
     githubBranch: 'main',
     gitHubLink: 'https://github.com/guyettinger/EmergenceInACup',
