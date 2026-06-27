@@ -24,7 +24,7 @@ export const projectData = [
     githubProject: 'guyettinger/PourMyFriends',
     githubBranch: 'main',
     gitHubLink: 'https://github.com/guyettinger/PourMyFriends',
-    demoLink: 'https://www.linkedin.com/feed/update/urn:li:activity:7367569881820577793/',
+    demoLink: 'https://emergence-in-a-cup.vercel.app/#simulator',
   },
   {
     id: 'gle-asl',
