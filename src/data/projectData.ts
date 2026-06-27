@@ -1,14 +1,5 @@
 export const projectData = [
   {
-    id: 'gle-vision-chat',
-    title: 'GLE Vision Chat',
-    description: 'A simple, fast vision chat app.',
-    githubProject: 'guyettinger/gle-vision-chat',
-    githubBranch: 'main',
-    gitHubLink: 'https://github.com/guyettinger/gle-vision-chat',
-    demoLink: 'https://gle-vision-chat.vercel.app/',
-  },
-  {
     id: 'emergence-in-a-cup',
     title: 'Emergence in a Cup',
     description: 'An interactive lens on emergent dynamics using a latte.',
@@ -25,6 +16,15 @@ export const projectData = [
     githubBranch: 'main',
     gitHubLink: 'https://github.com/guyettinger/PourMyFriends',
     demoLink: 'https://emergence-in-a-cup.vercel.app/#simulator',
+  },
+  {
+    id: 'gle-vision-chat',
+    title: 'GLE Vision Chat',
+    description: 'A simple, fast vision chat app.',
+    githubProject: 'guyettinger/gle-vision-chat',
+    githubBranch: 'main',
+    gitHubLink: 'https://github.com/guyettinger/gle-vision-chat',
+    demoLink: 'https://gle-vision-chat.vercel.app/',
   },
   {
     id: 'gle-asl',
