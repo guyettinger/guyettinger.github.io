@@ -9,6 +9,15 @@ export const projectData = [
     demoLink: 'https://gle-vision-chat.vercel.app/',
   },
   {
+    id: 'emergence-in-a-cup',
+    title: 'Emergence in a Cup',
+    description: 'An interactive lens on emergent dynamics using a latte.',
+    githubProject: 'guyettinger/EmergenceInACup',
+    githubBranch: 'main',
+    gitHubLink: 'https://github.com/guyettinger/EmergenceInACup',
+    demoLink: 'https://emergence-in-a-cup.vercel.app/',
+  },
+  {
     id: 'pour-my-friends',
     title: 'Pour My Friends',
     description: 'A latte art simulator.',
