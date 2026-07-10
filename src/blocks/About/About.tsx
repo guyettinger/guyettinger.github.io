@@ -13,8 +13,9 @@ export const About = () => {
             makes people's lives better, and the truth is, you can't do that alone — the best
             solutions come from great collaboration. Whether I'm shaping ideas, working as part of
             an engineering team, or listening closely to users, I'm all about finding elegant
-            answers together — preferably over a good cup of coffee. Let's build something great.
+            answers together — preferably over a good cup of coffee.
           </p>
+          <p>Let's build something great.</p>
         </div>
         <div>
           <Image
