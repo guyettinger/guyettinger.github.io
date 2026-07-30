@@ -4,6 +4,8 @@ import { CardContext } from '@/components/Cards/cardContext';
 import { MarkdownDocument } from '@/components/Markdown';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { projectData } from '@/data/projectData';
+import { projectScreenshots } from '@/data/projectScreenshots';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface ProjectViewProps {
@@ -11,11 +13,23 @@ interface ProjectViewProps {
 }
 
 const SmallProjectView = ({ project }: ProjectViewProps) => {
+  const screenshot = projectScreenshots[project.id];
   return (
     <CardView
       key={project.id}
       title={project.title}
       description={project.description}
+      bannerArea={
+        screenshot && (
+          <Image
+            src={screenshot}
+            alt={project.title}
+            fill
+            sizes="(max-width:768px) 100vw, 25vw"
+            className="object-cover object-top"
+          />
+        )
+      }
       actionArea={
         <>
           {!!project.demoLink && (

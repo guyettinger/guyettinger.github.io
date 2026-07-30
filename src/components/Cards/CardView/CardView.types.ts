@@ -5,4 +5,5 @@ export interface CardViewProps extends HTMLAttributes<HTMLDivElement> {
   description?: string;
   iconArea?: ReactNode;
   actionArea?: ReactNode;
+  bannerArea?: ReactNode;
 }
