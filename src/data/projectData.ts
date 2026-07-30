@@ -1,5 +1,13 @@
 export const projectData = [
   {
+    id: 'deskrag',
+    title: 'DeskRAG',
+    description: 'Local-first, multimodal desktop session memory.',
+    githubProject: 'guyettinger/DeskRAG',
+    githubBranch: 'main',
+    gitHubLink: 'https://github.com/guyettinger/DeskRAG',
+  },
+  {
     id: 'emergence-in-a-cup',
     title: 'Emergence in a Cup',
     description: 'An interactive lens on emergent dynamics using a latte art.',
