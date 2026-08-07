@@ -8,12 +8,18 @@ export const CardView = ({
   description,
   iconArea = <i className="fa-regular fa-folder-open text-lg" />,
   actionArea,
+  bannerArea,
   children,
   className,
   ...cardProps
 }: CardViewProps) => {
   return (
     <Card className={cn('flex cursor-pointer flex-col', className)} {...cardProps}>
+      {!!bannerArea && (
+        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-xl">
+          {bannerArea}
+        </div>
+      )}
       <CardHeader className="gap-2 flex-row justify-between items-center">
         {!!iconArea && <div className="flex h-4 w-4 justify-center">{iconArea}</div>}
         {!!title && (
