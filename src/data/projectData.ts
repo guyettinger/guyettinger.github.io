@@ -17,6 +17,14 @@ export const projectData = [
     demoLink: 'https://emergence-in-a-cup.vercel.app/',
   },
   {
+    id: 'anyapp',
+    title: 'Anyapp',
+    description: 'A self-modifying app.',
+    githubProject: 'guyettinger/anyapp',
+    githubBranch: 'main',
+    gitHubLink: 'https://github.com/guyettinger/anyapp',
+  },
+  {
     id: 'pour-my-friends',
     title: 'Pour My Friends',
     description: 'A latte art simulator.',
