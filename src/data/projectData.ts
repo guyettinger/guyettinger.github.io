@@ -17,12 +17,12 @@ export const projectData = [
     demoLink: 'https://emergence-in-a-cup.vercel.app/',
   },
   {
-    id: 'anyapp',
-    title: 'Anyapp',
+    id: 'keylimepi',
+    title: 'Key Lime Pi',
     description: 'A self-modifying app.',
-    githubProject: 'guyettinger/anyapp',
+    githubProject: 'guyettinger/keylimepi',
     githubBranch: 'main',
-    gitHubLink: 'https://github.com/guyettinger/anyapp',
+    gitHubLink: 'https://github.com/guyettinger/keylimepi',
   },
   {
     id: 'pour-my-friends',
